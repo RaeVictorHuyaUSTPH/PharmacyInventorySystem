@@ -31,7 +31,7 @@ public class MedicineController {
 
     @Operation(summary = "Adding medicine to the inventory")
     @PostMapping("/addMedicine")
-    public Medicine addMedicine(@RequestBody Medicine medicine) throws MedicineAlreadyExistsException {
+    public MedicineDto addMedicine(@RequestBody Medicine medicine) throws MedicineAlreadyExistsException {
         log.info("Adding new medicine");
         return medicineService.addMedicine(medicine);
     }
@@ -52,14 +52,14 @@ public class MedicineController {
 
     @Operation(summary = "Update existing medicine in the inventory")
     @PostMapping("/updateMedicine/{id}")
-    public Medicine updateMedicine(@PathVariable int id) throws MedicineNotFoundException {
+    public MedicineDto updateMedicine(@PathVariable int id) throws MedicineNotFoundException {
         log.info("Update existing medicine");
         return medicineService.updateMedicine(id);
     }
 
     @Operation(summary = "Restock medicine in the inventory")
     @PostMapping("/addStock/id={id}&stock={updateStock}")
-    public Medicine addStock(@PathVariable int id, @PathVariable int updateStock) throws MedicineNotFoundException,
+    public MedicineDto addStock(@PathVariable int id, @PathVariable int updateStock) throws MedicineNotFoundException,
             NegativeStockException {
         log.info("Adding the stock of medicine");
         return medicineService.addStock(id, updateStock);
@@ -67,7 +67,7 @@ public class MedicineController {
 
     @Operation(summary = "Destock medicine in the inventory")
     @PostMapping("/reduceStock/id={id}&stock={updateStock}")
-    public Medicine reduceStock(@PathVariable int id, @PathVariable int updateStock) throws MedicineNotFoundException,
+    public MedicineDto reduceStock(@PathVariable int id, @PathVariable int updateStock) throws MedicineNotFoundException,
             NegativeStockException {
         log.info("Reducing the stock of medicine");
         return medicineService.reduceStock(id, updateStock);

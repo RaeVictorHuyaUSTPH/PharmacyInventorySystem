@@ -7,6 +7,7 @@ import com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundExc
 import com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException;
 import com.alpha.pharmacyinventorymanagementsystem.repository.MedicineRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,36 +21,38 @@ public class MedicineService {
     private MedicineRepository medicineRepository;
     @Autowired
     private MedicineDTOMapper medicineDTOMapper;
+    @Autowired
+    private ModelMapper modelMapper;
     private static final String NEGATIVESTOCKERROR = "Stock should not be a negative value";
     private static final String MEDICINENOTFOUNDERROR = "Medicine Not Found in the Database";
 
-    public Medicine addMedicine(Medicine medicine) throws MedicineAlreadyExistsException {
+    public MedicineDto addMedicine(Medicine medicine) throws MedicineAlreadyExistsException {
         if (medicineRepository.existsByMedicineName(medicine.getMedicineName())) {
             String medicineExistsError = "Medicine already exists in the database";
             log.error(medicineExistsError);
             throw new MedicineAlreadyExistsException(medicineExistsError);
         }
-
-        return medicineRepository.save(medicine);
+        return  convertEntityToDto(medicineRepository.save(medicine));
     }
 
     public List<MedicineDto> findAllMedicine() {
         List<Medicine> medicines = medicineRepository.findAll();
-        return medicines.stream().map(medicineDTOMapper).toList();
+        return medicines.stream().map(this::convertEntityToDto).toList();
 
     }
 
     public MedicineDto findMedicine(Integer id) throws MedicineNotFoundException {
 
-        MedicineDto medicine = medicineRepository.findById(id).map(medicineDTOMapper).orElse(null);
+        MedicineDto medicine = medicineRepository.findById(id).map(this::convertEntityToDto).orElse(null);
         if (medicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
             throw new MedicineNotFoundException(MEDICINENOTFOUNDERROR);
         }
+
         return medicine;
     }
 
-    public Medicine updateMedicine(int id) throws MedicineNotFoundException {
+    public MedicineDto updateMedicine(int id) throws MedicineNotFoundException {
         Medicine editMedicine = medicineRepository.findById(id).orElse(null);
         if (editMedicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
@@ -59,10 +62,10 @@ public class MedicineService {
         editMedicine.setMedicineDescription(editMedicine.getMedicineDescription());
         editMedicine.setMedicinePrice(editMedicine.getMedicinePrice());
 
-        return medicineRepository.save(editMedicine);
+        return convertEntityToDto(medicineRepository.save(editMedicine));
     }
 
-    public Medicine reduceStock(int id, int updateStock) throws MedicineNotFoundException, NegativeStockException {
+    public MedicineDto reduceStock(int id, int updateStock) throws MedicineNotFoundException, NegativeStockException {
 
         Medicine editMedicine = medicineRepository.findById(id).orElse(null);
         if (editMedicine == null) {
@@ -75,10 +78,10 @@ public class MedicineService {
             throw new NegativeStockException(NEGATIVESTOCKERROR);
         }
         editMedicine.setMedicineStock(update);
-        return medicineRepository.save(editMedicine);
+        return convertEntityToDto(medicineRepository.save(editMedicine));
     }
 
-    public Medicine addStock(int id, Integer updateStock) throws MedicineNotFoundException, NegativeStockException {
+    public MedicineDto addStock(int id, Integer updateStock) throws MedicineNotFoundException, NegativeStockException {
 
         Medicine editMedicine = medicineRepository.findById(id).orElse(null);
         if (editMedicine == null) {
@@ -91,7 +94,7 @@ public class MedicineService {
             throw new NegativeStockException(NEGATIVESTOCKERROR);
         }
         editMedicine.setMedicineStock(update);
-        return medicineRepository.save(editMedicine);
+        return convertEntityToDto(medicineRepository.save(editMedicine));
     }
 
     public StringBuilder deleteMedicine(int id) throws MedicineNotFoundException {
@@ -104,5 +107,10 @@ public class MedicineService {
         return new StringBuilder("This medicine with the medicine id of ")
                 .append(id).append(" has been removed from the inventory.");
     }
+    private MedicineDto convertEntityToDto(Medicine medicine){
+        MedicineDto medicineDto=modelMapper.map(medicine,MedicineDto.class);
+        return medicineDto;
+    }
+
 
 }
