@@ -13,7 +13,7 @@ public class MedicineDTOMapper implements Function<Medicine, MedicineDto> {
 
     @Override
     public MedicineDto apply(Medicine medicine) {
-        return new MedicineDto(medicine.getMedicineId(),
+        return new MedicineDto(
                 medicine.getMedicineName(), medicine.getMedicinePrice());
     }
 }

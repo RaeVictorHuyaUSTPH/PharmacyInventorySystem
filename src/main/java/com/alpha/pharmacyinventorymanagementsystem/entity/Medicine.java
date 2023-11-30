@@ -21,14 +21,14 @@ import lombok.ToString;
 public class Medicine {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "medicineId", nullable = false, updatable = false)
+    @Column(name = "medicineId")
     private int medicineId;
-    @Column(name = "medicineName", nullable = false)
+    @Column(name = "medicineName")
     private String medicineName;
-    @Column(name = "medicineDescription", nullable = false)
+    @Column(name = "medicineDescription")
     private String medicineDescription;
-    @Column(name = "medicinePrice", nullable = false)
+    @Column(name = "medicinePrice")
     private double medicinePrice;
-    @Column(name = "medicineStock", nullable = false)
+    @Column(name = "medicineStock")
     private int medicineStock;
 }

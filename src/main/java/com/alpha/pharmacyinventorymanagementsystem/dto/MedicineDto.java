@@ -12,7 +12,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 public class MedicineDto implements Serializable {
-    private int medId;
     private String name;
     private double price;
 }

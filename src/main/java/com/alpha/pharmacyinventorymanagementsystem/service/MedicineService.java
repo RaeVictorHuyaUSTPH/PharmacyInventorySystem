@@ -111,6 +111,10 @@ public class MedicineService {
         MedicineDto medicineDto=modelMapper.map(medicine,MedicineDto.class);
         return medicineDto;
     }
+    private Medicine convertDtoToEntity(MedicineDto medicineDto){
+        Medicine medicine=modelMapper.map(medicineDto,Medicine.class);
+        return medicine;
+    }
 
 
 }
