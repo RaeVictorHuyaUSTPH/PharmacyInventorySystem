@@ -11,8 +11,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class MedicineDto implements Serializable {
-    private int medicineId;
+public class CreateMedicineDto implements Serializable {
     private String medicineName;
     private String medicineDescription;
     private double medicinePrice;

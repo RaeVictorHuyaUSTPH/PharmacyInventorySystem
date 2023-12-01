@@ -2109,3 +2109,1282 @@ org.hibernate.PropertyValueException: not-null property references a null or tra
 2023-11-30 20:59:11 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-30 20:59:11 INFO  - HikariPool-1 - Shutdown initiated...
 2023-11-30 20:59:11 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 10:08:34 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 19536 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 10:08:34 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 10:08:35 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 10:08:35 INFO  - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2023-12-01 10:08:36 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 10:08:36 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 10:08:36 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 10:08:36 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 10:08:36 INFO  - Starting service [Tomcat]
+2023-12-01 10:08:36 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 10:08:36 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 10:08:36 INFO  - Root WebApplicationContext: initialization completed in 1695 ms
+2023-12-01 10:08:36 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 10:08:36 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 10:08:36 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 10:08:37 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 10:08:37 INFO  - HikariPool-1 - Starting...
+2023-12-01 10:08:37 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18989e0
+2023-12-01 10:08:37 INFO  - HikariPool-1 - Start completed.
+2023-12-01 10:08:38 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 10:08:38 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:08:38 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 10:08:39 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 10:08:39 INFO  - Started PharmacyInventorySystemApplication in 4.861 seconds (process running for 5.305)
+2023-12-01 10:08:56 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 10:08:56 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 10:08:56 INFO  - Completed initialization in 1 ms
+2023-12-01 10:08:56 INFO  - Init duration for springdoc-openapi is: 221 ms
+2023-12-01 10:09:36 INFO  - Adding new medicine
+2023-12-01 10:10:28 INFO  - Adding new medicine
+2023-12-01 10:10:28 ERROR - Medicine already exists in the database
+2023-12-01 10:10:28 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineAlreadyExistsException: Medicine already exists in the database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineAlreadyExistsException: Medicine already exists in the database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.addMedicine(MedicineService.java:33)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.addMedicine(MedicineController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 10:10:48 INFO  - Adding new medicine
+2023-12-01 10:11:33 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:11:33 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 10:11:33 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 10:11:41 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 27212 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 10:11:41 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 10:11:42 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 10:11:42 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2023-12-01 10:11:43 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 10:11:43 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 10:11:43 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 10:11:43 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 10:11:43 INFO  - Starting service [Tomcat]
+2023-12-01 10:11:43 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 10:11:43 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 10:11:43 INFO  - Root WebApplicationContext: initialization completed in 1382 ms
+2023-12-01 10:11:43 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 10:11:43 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 10:11:43 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 10:11:43 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 10:11:43 INFO  - HikariPool-1 - Starting...
+2023-12-01 10:11:43 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@559fd5ec
+2023-12-01 10:11:43 INFO  - HikariPool-1 - Start completed.
+2023-12-01 10:11:44 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 10:11:44 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:11:44 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 10:11:45 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 10:11:45 INFO  - Started PharmacyInventorySystemApplication in 4.056 seconds (process running for 4.424)
+2023-12-01 10:11:48 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 10:11:48 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 10:11:48 INFO  - Completed initialization in 1 ms
+2023-12-01 10:11:48 INFO  - Init duration for springdoc-openapi is: 190 ms
+2023-12-01 10:12:18 INFO  - Adding new medicine
+2023-12-01 10:15:23 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:15:23 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 10:15:23 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 10:15:40 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 16364 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 10:15:40 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 10:15:41 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 10:15:41 INFO  - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2023-12-01 10:15:42 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 10:15:42 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 10:15:42 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 10:15:42 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 10:15:42 INFO  - Starting service [Tomcat]
+2023-12-01 10:15:42 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 10:15:42 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 10:15:42 INFO  - Root WebApplicationContext: initialization completed in 1497 ms
+2023-12-01 10:15:42 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 10:15:42 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 10:15:42 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 10:15:42 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 10:15:42 INFO  - HikariPool-1 - Starting...
+2023-12-01 10:15:42 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ef0e576
+2023-12-01 10:15:42 INFO  - HikariPool-1 - Start completed.
+2023-12-01 10:15:43 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 10:15:43 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:15:44 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 10:15:44 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 10:15:44 INFO  - Started PharmacyInventorySystemApplication in 4.361 seconds (process running for 4.744)
+2023-12-01 10:15:47 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 10:15:47 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 10:15:47 INFO  - Completed initialization in 1 ms
+2023-12-01 10:15:47 INFO  - Init duration for springdoc-openapi is: 202 ms
+2023-12-01 10:16:07 INFO  - Update existing medicine
+2023-12-01 10:28:01 INFO  - Update existing medicine
+2023-12-01 10:28:01 ERROR - Medicine Not Found in the Database
+2023-12-01 10:28:01 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.updateMedicine(MedicineService.java:65)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.updateMedicine(MedicineController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 10:28:08 INFO  - Update existing medicine
+2023-12-01 10:28:08 ERROR - Medicine Not Found in the Database
+2023-12-01 10:28:08 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.updateMedicine(MedicineService.java:65)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.updateMedicine(MedicineController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 10:50:45 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:50:45 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 10:50:45 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 10:51:36 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 12844 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 10:51:36 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 10:51:37 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 10:51:37 INFO  - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2023-12-01 10:51:37 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 10:51:37 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 10:51:37 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 10:51:37 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 10:51:37 INFO  - Starting service [Tomcat]
+2023-12-01 10:51:37 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 10:51:38 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 10:51:38 INFO  - Root WebApplicationContext: initialization completed in 1570 ms
+2023-12-01 10:51:38 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 10:51:38 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 10:51:38 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 10:51:38 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 10:51:38 INFO  - HikariPool-1 - Starting...
+2023-12-01 10:51:38 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@785a4557
+2023-12-01 10:51:38 INFO  - HikariPool-1 - Start completed.
+2023-12-01 10:51:39 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 10:51:39 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 10:51:40 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 10:51:40 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 10:51:40 INFO  - Started PharmacyInventorySystemApplication in 4.565 seconds (process running for 4.926)
+2023-12-01 10:51:41 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 10:51:41 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 10:51:41 INFO  - Completed initialization in 0 ms
+2023-12-01 10:51:42 INFO  - Init duration for springdoc-openapi is: 197 ms
+2023-12-01 10:52:14 INFO  - Adding new medicine
+2023-12-01 10:54:46 INFO  - Fetching all medicine
+2023-12-01 10:55:05 INFO  - Fetching specific medicine
+2023-12-01 10:55:12 INFO  - Fetching specific medicine
+2023-12-01 10:55:12 ERROR - Medicine Not Found in the Database
+2023-12-01 10:55:12 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.findMedicine(MedicineService.java:56)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.findMedicineById(MedicineController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 10:55:39 INFO  - Fetching specific medicine
+2023-12-01 10:55:39 ERROR - Medicine Not Found in the Database
+2023-12-01 10:55:39 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.findMedicine(MedicineService.java:56)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.findMedicineById(MedicineController.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 11:01:38 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:01:38 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:01:38 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:01:43 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 6400 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:01:43 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:01:44 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:01:44 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2023-12-01 11:01:44 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:01:44 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:01:44 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:01:44 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:01:44 INFO  - Starting service [Tomcat]
+2023-12-01 11:01:44 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:01:44 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:01:44 INFO  - Root WebApplicationContext: initialization completed in 1607 ms
+2023-12-01 11:01:45 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:01:45 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:01:45 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:01:45 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:01:45 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:01:45 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@559fd5ec
+2023-12-01 11:01:45 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:01:46 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:01:46 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:01:46 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:01:47 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:01:47 INFO  - Started PharmacyInventorySystemApplication in 4.583 seconds (process running for 4.954)
+2023-12-01 11:01:47 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:01:47 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:01:47 INFO  - Completed initialization in 1 ms
+2023-12-01 11:01:48 INFO  - Init duration for springdoc-openapi is: 215 ms
+2023-12-01 11:02:24 INFO  - Adding the stock of medicine
+2023-12-01 11:02:24 ERROR - Stock should not be a negative value
+2023-12-01 11:02:24 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.addStock(MedicineService.java:107)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.addStock(MedicineController.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 11:02:48 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:07:07 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:07:07 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:07:07 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:07:20 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 22016 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:07:20 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:07:21 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:07:21 INFO  - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2023-12-01 11:07:22 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:07:22 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:07:22 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:07:22 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:07:22 INFO  - Starting service [Tomcat]
+2023-12-01 11:07:22 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:07:22 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:07:22 INFO  - Root WebApplicationContext: initialization completed in 1385 ms
+2023-12-01 11:07:22 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:07:22 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:07:22 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:07:22 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:07:22 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:07:23 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bf3ec4
+2023-12-01 11:07:23 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:07:23 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:07:23 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:07:24 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:07:24 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:07:24 INFO  - Started PharmacyInventorySystemApplication in 4.222 seconds (process running for 4.578)
+2023-12-01 11:07:24 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:07:24 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:07:24 INFO  - Completed initialization in 1 ms
+2023-12-01 11:07:25 INFO  - Init duration for springdoc-openapi is: 209 ms
+2023-12-01 11:07:43 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:09:23 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:09:23 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:09:23 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:09:32 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 13588 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:09:32 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:09:32 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:09:33 INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2023-12-01 11:09:33 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:09:33 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:09:33 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:09:33 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:09:33 INFO  - Starting service [Tomcat]
+2023-12-01 11:09:33 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:09:33 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:09:33 INFO  - Root WebApplicationContext: initialization completed in 1458 ms
+2023-12-01 11:09:34 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:09:34 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:09:34 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:09:34 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:09:34 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:09:34 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@559fd5ec
+2023-12-01 11:09:34 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:09:35 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:09:35 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:09:35 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:09:36 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:09:36 INFO  - Started PharmacyInventorySystemApplication in 4.344 seconds (process running for 4.704)
+2023-12-01 11:09:40 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:09:40 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:09:40 INFO  - Completed initialization in 1 ms
+2023-12-01 11:09:40 INFO  - Init duration for springdoc-openapi is: 196 ms
+2023-12-01 11:09:58 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:11:56 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:11:56 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:11:57 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:12:03 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 15868 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:12:03 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:12:03 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:12:03 INFO  - Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2023-12-01 11:12:04 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:12:04 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:12:04 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:12:04 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:12:04 INFO  - Starting service [Tomcat]
+2023-12-01 11:12:04 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:12:04 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:12:04 INFO  - Root WebApplicationContext: initialization completed in 1442 ms
+2023-12-01 11:12:04 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:12:04 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:12:04 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:12:04 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:12:04 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:12:05 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18989e0
+2023-12-01 11:12:05 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:12:05 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:12:05 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:12:06 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:12:06 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:12:06 INFO  - Started PharmacyInventorySystemApplication in 4.172 seconds (process running for 4.533)
+2023-12-01 11:12:16 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:12:16 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:12:16 INFO  - Completed initialization in 1 ms
+2023-12-01 11:12:16 INFO  - Init duration for springdoc-openapi is: 255 ms
+2023-12-01 11:12:28 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:14:00 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:14:00 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:14:00 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:14:16 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 15176 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:14:16 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:14:16 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:14:16 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2023-12-01 11:14:17 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:14:17 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:14:17 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:14:17 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:14:17 INFO  - Starting service [Tomcat]
+2023-12-01 11:14:17 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:14:17 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:14:17 INFO  - Root WebApplicationContext: initialization completed in 1488 ms
+2023-12-01 11:14:17 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:14:17 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:14:18 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:14:18 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:14:18 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:14:18 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@285bf5ac
+2023-12-01 11:14:18 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:14:19 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:14:19 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:14:19 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:14:20 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:14:20 INFO  - Started PharmacyInventorySystemApplication in 4.368 seconds (process running for 4.751)
+2023-12-01 11:14:20 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:14:20 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:14:20 INFO  - Completed initialization in 1 ms
+2023-12-01 11:14:20 INFO  - Init duration for springdoc-openapi is: 228 ms
+2023-12-01 11:14:28 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:18:34 INFO  - Reducing the stock of medicine
+2023-12-01 11:18:48 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:20:38 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:20:38 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:20:38 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:20:45 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 2464 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:20:45 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:20:45 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:20:45 INFO  - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2023-12-01 11:20:46 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:20:46 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:20:46 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:20:46 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:20:46 INFO  - Starting service [Tomcat]
+2023-12-01 11:20:46 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:20:46 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:20:46 INFO  - Root WebApplicationContext: initialization completed in 1389 ms
+2023-12-01 11:20:46 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:20:46 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:20:46 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:20:46 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:20:46 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:20:47 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b5da0b0
+2023-12-01 11:20:47 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:20:47 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:20:47 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:20:48 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:20:48 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:20:48 INFO  - Started PharmacyInventorySystemApplication in 4.148 seconds (process running for 4.511)
+2023-12-01 11:20:53 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:20:53 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:20:53 INFO  - Completed initialization in 0 ms
+2023-12-01 11:20:53 INFO  - Init duration for springdoc-openapi is: 220 ms
+2023-12-01 11:21:03 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:21:57 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:21:57 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:21:57 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:22:15 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 21436 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:22:15 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:22:15 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:22:15 INFO  - Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2023-12-01 11:22:16 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:22:16 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:22:16 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:22:16 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:22:16 INFO  - Starting service [Tomcat]
+2023-12-01 11:22:16 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:22:16 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:22:16 INFO  - Root WebApplicationContext: initialization completed in 1390 ms
+2023-12-01 11:22:16 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:22:16 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:22:16 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:22:17 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:22:17 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:22:17 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@559fd5ec
+2023-12-01 11:22:17 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:22:18 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:22:18 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:22:18 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:22:18 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:22:18 INFO  - Started PharmacyInventorySystemApplication in 4.131 seconds (process running for 4.492)
+2023-12-01 11:22:21 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:22:21 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:22:21 INFO  - Completed initialization in 0 ms
+2023-12-01 11:22:22 INFO  - Init duration for springdoc-openapi is: 219 ms
+2023-12-01 11:22:30 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:39:16 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:39:16 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:39:16 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:39:20 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 22676 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:39:20 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:39:20 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:39:20 INFO  - Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2023-12-01 11:39:21 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:39:21 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:39:21 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:39:21 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:39:21 INFO  - Starting service [Tomcat]
+2023-12-01 11:39:21 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:39:21 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:39:21 INFO  - Root WebApplicationContext: initialization completed in 1453 ms
+2023-12-01 11:39:21 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:39:21 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:39:21 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:39:22 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:39:22 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:39:22 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37ffe4f3
+2023-12-01 11:39:22 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:39:23 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:39:23 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:39:23 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:39:24 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:39:24 INFO  - Started PharmacyInventorySystemApplication in 4.609 seconds (process running for 4.998)
+2023-12-01 11:39:26 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:39:26 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:39:26 INFO  - Completed initialization in 1 ms
+2023-12-01 11:39:26 INFO  - Init duration for springdoc-openapi is: 194 ms
+2023-12-01 11:39:43 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "a": not a valid `int` value]
+2023-12-01 11:40:05 INFO  - Reducing the stock of medicine
+2023-12-01 11:40:05 ERROR - Stock should not be a negative value
+2023-12-01 11:40:05 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.reduceStock(MedicineService.java:86)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.reduceStock(MedicineController.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 11:46:56 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:46:56 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:46:56 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:47:05 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 1512 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:47:05 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:47:05 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:47:05 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2023-12-01 11:47:06 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:47:06 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:47:06 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:47:06 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:47:06 INFO  - Starting service [Tomcat]
+2023-12-01 11:47:06 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:47:06 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:47:06 INFO  - Root WebApplicationContext: initialization completed in 1483 ms
+2023-12-01 11:47:06 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:47:06 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:47:06 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:47:07 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:47:07 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:47:07 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bfa17b0
+2023-12-01 11:47:07 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:47:08 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:47:08 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:47:08 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:47:09 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:47:09 INFO  - Started PharmacyInventorySystemApplication in 4.351 seconds (process running for 4.698)
+2023-12-01 11:47:10 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:47:10 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:47:10 INFO  - Completed initialization in 0 ms
+2023-12-01 11:47:10 INFO  - Init duration for springdoc-openapi is: 209 ms
+2023-12-01 11:47:21 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:51:55 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:51:55 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:51:55 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:52:06 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 22268 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:52:06 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:52:07 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:52:07 INFO  - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interface.
+2023-12-01 11:52:08 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:52:08 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:52:08 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:52:08 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:52:08 INFO  - Starting service [Tomcat]
+2023-12-01 11:52:08 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:52:08 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:52:08 INFO  - Root WebApplicationContext: initialization completed in 1534 ms
+2023-12-01 11:52:08 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:52:08 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:52:08 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:52:08 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:52:08 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:52:09 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bf3ec4
+2023-12-01 11:52:09 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:52:09 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:52:09 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:52:10 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:52:10 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:52:10 INFO  - Started PharmacyInventorySystemApplication in 4.339 seconds (process running for 4.712)
+2023-12-01 11:52:10 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:52:10 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:52:10 INFO  - Completed initialization in 0 ms
+2023-12-01 11:52:11 INFO  - Init duration for springdoc-openapi is: 227 ms
+2023-12-01 11:52:21 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:55:26 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:55:26 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:55:26 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:55:33 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 2408 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:55:33 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:55:34 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:55:34 INFO  - Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interface.
+2023-12-01 11:55:35 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:55:35 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:55:35 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:55:35 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:55:35 INFO  - Starting service [Tomcat]
+2023-12-01 11:55:35 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:55:35 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:55:35 INFO  - Root WebApplicationContext: initialization completed in 1527 ms
+2023-12-01 11:55:35 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:55:35 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:55:35 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:55:35 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:55:35 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:55:36 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bfa17b0
+2023-12-01 11:55:36 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:55:36 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:55:36 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:55:37 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:55:37 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:55:37 INFO  - Started PharmacyInventorySystemApplication in 4.262 seconds (process running for 4.624)
+2023-12-01 11:55:47 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:55:47 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:55:47 INFO  - Completed initialization in 1 ms
+2023-12-01 11:55:47 INFO  - Init duration for springdoc-openapi is: 204 ms
+2023-12-01 11:55:57 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 11:58:59 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:58:59 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 11:58:59 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 11:59:04 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 20848 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 11:59:04 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 11:59:04 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 11:59:05 INFO  - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2023-12-01 11:59:05 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 11:59:05 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 11:59:05 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 11:59:05 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 11:59:05 INFO  - Starting service [Tomcat]
+2023-12-01 11:59:05 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 11:59:05 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 11:59:05 INFO  - Root WebApplicationContext: initialization completed in 1564 ms
+2023-12-01 11:59:05 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 11:59:05 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 11:59:06 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 11:59:06 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 11:59:06 INFO  - HikariPool-1 - Starting...
+2023-12-01 11:59:06 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c9cafa5
+2023-12-01 11:59:06 INFO  - HikariPool-1 - Start completed.
+2023-12-01 11:59:07 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 11:59:07 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 11:59:07 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 11:59:08 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 11:59:08 INFO  - Started PharmacyInventorySystemApplication in 4.639 seconds (process running for 5.048)
+2023-12-01 11:59:14 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 11:59:14 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 11:59:14 INFO  - Completed initialization in 0 ms
+2023-12-01 11:59:14 INFO  - Init duration for springdoc-openapi is: 217 ms
+2023-12-01 11:59:23 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 12:06:12 INFO  - Reducing the stock of medicine
+2023-12-01 12:23:50 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:23:50 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:23:50 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 12:24:07 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 21304 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 12:24:07 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 12:24:07 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:24:07 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
+2023-12-01 12:24:08 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 12:24:08 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 12:24:08 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 12:24:08 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 12:24:08 INFO  - Starting service [Tomcat]
+2023-12-01 12:24:08 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:24:08 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:24:08 INFO  - Root WebApplicationContext: initialization completed in 1475 ms
+2023-12-01 12:24:08 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:24:08 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:24:08 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 12:24:09 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:24:09 INFO  - HikariPool-1 - Starting...
+2023-12-01 12:24:09 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b5da0b0
+2023-12-01 12:24:09 INFO  - HikariPool-1 - Start completed.
+2023-12-01 12:24:10 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:24:10 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:24:10 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:24:11 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 12:24:11 INFO  - Started PharmacyInventorySystemApplication in 4.345 seconds (process running for 4.778)
+2023-12-01 12:24:18 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:24:18 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 12:24:18 INFO  - Completed initialization in 0 ms
+2023-12-01 12:24:19 INFO  - Init duration for springdoc-openapi is: 218 ms
+2023-12-01 12:24:32 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 12:24:42 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "k": not a valid `int` value]
+2023-12-01 12:30:13 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:30:13 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:30:13 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 12:30:21 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 16624 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 12:30:21 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 12:30:22 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:30:22 INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2023-12-01 12:30:23 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 12:30:23 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 12:30:23 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 12:30:23 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 12:30:23 INFO  - Starting service [Tomcat]
+2023-12-01 12:30:23 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:30:23 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:30:23 INFO  - Root WebApplicationContext: initialization completed in 1537 ms
+2023-12-01 12:30:23 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:30:23 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:30:23 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 12:30:24 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:30:24 INFO  - HikariPool-1 - Starting...
+2023-12-01 12:30:24 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18989e0
+2023-12-01 12:30:24 INFO  - HikariPool-1 - Start completed.
+2023-12-01 12:30:25 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:30:25 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:30:25 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:30:26 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 12:30:26 INFO  - Started PharmacyInventorySystemApplication in 4.6 seconds (process running for 4.961)
+2023-12-01 12:30:26 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:30:26 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 12:30:26 INFO  - Completed initialization in 1 ms
+2023-12-01 12:30:26 INFO  - Init duration for springdoc-openapi is: 227 ms
+2023-12-01 12:30:38 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "k": not a valid `int` value]
+2023-12-01 12:40:51 INFO  - Reducing the stock of medicine
+2023-12-01 12:41:02 INFO  - Reducing the stock of medicine
+2023-12-01 12:41:47 INFO  - Adding the stock of medicine
+2023-12-01 12:41:59 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 12:44:39 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'gamot': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 12:53:07 INFO  - Deleting medicine
+2023-12-01 12:59:04 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:59:04 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 12:59:04 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 12:59:13 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 9932 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 12:59:13 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 12:59:13 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 12:59:13 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+2023-12-01 12:59:14 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 12:59:14 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 12:59:14 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 12:59:14 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 12:59:14 INFO  - Starting service [Tomcat]
+2023-12-01 12:59:14 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 12:59:14 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 12:59:14 INFO  - Root WebApplicationContext: initialization completed in 1404 ms
+2023-12-01 12:59:14 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 12:59:14 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 12:59:14 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 12:59:14 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 12:59:14 INFO  - HikariPool-1 - Starting...
+2023-12-01 12:59:15 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ccdacf5
+2023-12-01 12:59:15 INFO  - HikariPool-1 - Start completed.
+2023-12-01 12:59:15 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 12:59:15 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 12:59:16 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 12:59:16 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 12:59:16 INFO  - Started PharmacyInventorySystemApplication in 4.314 seconds (process running for 4.713)
+2023-12-01 12:59:19 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 12:59:19 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 12:59:19 INFO  - Completed initialization in 0 ms
+2023-12-01 12:59:19 INFO  - Init duration for springdoc-openapi is: 217 ms
+2023-12-01 12:59:28 INFO  - Fetching all medicine
+2023-12-01 13:00:34 INFO  - Update existing medicine
+2023-12-01 13:00:34 ERROR - Medicine Not Found in the Database
+2023-12-01 13:00:34 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.updateMedicine(MedicineService.java:68)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.updateMedicine(MedicineController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 13:00:58 INFO  - Update existing medicine
+2023-12-01 13:00:58 ERROR - Medicine Not Found in the Database
+2023-12-01 13:00:58 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.updateMedicine(MedicineService.java:68)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.updateMedicine(MedicineController.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 13:01:21 INFO  - Update existing medicine
+2023-12-01 13:01:55 INFO  - Update existing medicine
+2023-12-01 13:03:03 INFO  - Update existing medicine
+2023-12-01 13:03:20 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `double` from String "k": not a valid `double` value (as String to convert)]
+2023-12-01 13:08:06 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'Tuseran': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 15:47:58 INFO  - Reducing the stock of medicine
+2023-12-01 15:48:27 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 16:03:21 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 16:08:22 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 16:08:22 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 16:08:22 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-01 16:08:34 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 8368 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-01 16:08:34 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-01 16:08:35 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01 16:08:35 INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2023-12-01 16:08:36 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-01 16:08:36 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-01 16:08:36 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-01 16:08:36 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-01 16:08:36 INFO  - Starting service [Tomcat]
+2023-12-01 16:08:36 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01 16:08:36 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-01 16:08:36 INFO  - Root WebApplicationContext: initialization completed in 1370 ms
+2023-12-01 16:08:36 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01 16:08:36 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-01 16:08:36 INFO  - HHH000026: Second-level cache disabled
+2023-12-01 16:08:36 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01 16:08:36 INFO  - HikariPool-1 - Starting...
+2023-12-01 16:08:36 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fa0ee7e
+2023-12-01 16:08:36 INFO  - HikariPool-1 - Start completed.
+2023-12-01 16:08:37 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01 16:08:37 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 16:08:38 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01 16:08:38 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-01 16:08:38 INFO  - Started PharmacyInventorySystemApplication in 4.172 seconds (process running for 4.551)
+2023-12-01 16:08:46 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-01 16:08:46 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-01 16:08:46 INFO  - Completed initialization in 1 ms
+2023-12-01 16:08:46 INFO  - Init duration for springdoc-openapi is: 193 ms
+2023-12-01 16:09:04 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 16:09:17 INFO  - Reducing the stock of medicine
+2023-12-01 16:09:17 ERROR - Medicine Not Found in the Database
+2023-12-01 16:09:17 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException: Medicine Not Found in the Database
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.reduceStock(MedicineService.java:83)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.reduceStock(MedicineController.java:83)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 16:56:42 INFO  - Reducing the stock of medicine
+2023-12-01 16:57:01 INFO  - Reducing the stock of medicine
+2023-12-01 16:57:01 ERROR - Stock should not be a negative value
+2023-12-01 16:57:01 ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value] with root cause
+com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException: Stock should not be a negative value
+	at com.alpha.pharmacyinventorymanagementsystem.service.MedicineService.reduceStock(MedicineService.java:88)
+	at com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.reduceStock(MedicineController.java:83)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-01 16:57:30 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2023-12-01 17:20:00 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01 17:20:00 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-01 17:20:00 INFO  - HikariPool-1 - Shutdown completed.
