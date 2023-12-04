@@ -8,7 +8,6 @@ import com.alpha.pharmacyinventorymanagementsystem.exception.MedicineAlreadyExis
 import com.alpha.pharmacyinventorymanagementsystem.exception.MedicineNotFoundException;
 import com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockException;
 
-import com.alpha.pharmacyinventorymanagementsystem.service.InputFormatException;
 import com.alpha.pharmacyinventorymanagementsystem.service.MedicineService;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,18 +15,15 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
 
 @RestController
 @Slf4j
-@OpenAPIDefinition(info = @Info(title = "Test API", version = "1.0", description = "Test Controller"))
+@RequestMapping("/pharmacy")
+@OpenAPIDefinition(info = @Info(title = "Pharmacy Inventory API", version = "1.0", description = "Pharmacy Controller"))
 
 public class MedicineController {
     @Autowired
@@ -65,7 +61,7 @@ public class MedicineController {
     }
 
     @Operation(summary = "Restock medicine in the inventory")
-    @PostMapping("/addStock/id={id}&stock={updateStock}")
+    @PostMapping("/addStock/id={id}")
     public MedicineDto addStock(@PathVariable int id, @RequestBody StockMedicineDto stockMedicineDto) throws MedicineNotFoundException,
             NegativeStockException {
         log.info("Adding the stock of medicine");
@@ -74,15 +70,9 @@ public class MedicineController {
 
     @Operation(summary = "Destock medicine in the inventory")
     @PostMapping("/reduceStock/id={id}")
-    public MedicineDto reduceStock(@PathVariable int id, @RequestBody StockMedicineDto stockMedicineDto) throws  InputFormatException,MedicineNotFoundException,
+    public MedicineDto reduceStock(@PathVariable int id, @RequestBody StockMedicineDto stockMedicineDto) throws  MedicineNotFoundException,
             NegativeStockException {
-        int medicineStock;
-try{
-    medicineStock=Integer.parseInt(String.valueOf(stockMedicineDto.getMedicineStock()));
-}catch(NumberFormatException e){
-    log.error("Stock must be integer");
-    throw new InputFormatException("Stock must be integer");
-}
+
         log.info("Reducing the stock of medicine");
         return medicineService.reduceStock(id, stockMedicineDto);
     }

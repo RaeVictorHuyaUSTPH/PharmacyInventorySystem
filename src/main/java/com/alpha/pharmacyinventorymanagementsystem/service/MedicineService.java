@@ -11,9 +11,11 @@ import com.alpha.pharmacyinventorymanagementsystem.exception.NegativeStockExcept
 import com.alpha.pharmacyinventorymanagementsystem.repository.MedicineRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,8 +25,6 @@ public class MedicineService {
     @Autowired
     private MedicineRepository medicineRepository;
 
-@Autowired
-private ConvertService convertService;
     private static final String NEGATIVESTOCKERROR = "Stock should not be a negative value";
     private static final String MEDICINENOTFOUNDERROR = "Medicine Not Found in the Database";
 
@@ -36,29 +36,32 @@ private ConvertService convertService;
             throw new MedicineAlreadyExistsException(medicineExistsError);
         }
         Medicine medicine=new Medicine();
+        BeanUtils.copyProperties(createMedicineDto,medicine);
         medicine.setMedicineId(medicine.getMedicineId());
-        medicine.setMedicineName(createMedicineDto.getMedicineName());
-        medicine.setMedicineDescription(createMedicineDto.getMedicineDescription());
-        medicine.setMedicinePrice(createMedicineDto.getMedicinePrice());
-        medicine.setMedicineStock(createMedicineDto.getMedicineStock());
-        return  convertService.convertEntityToMedicineDto(medicineRepository.save(medicine));
+        MedicineDto medicineDto=new MedicineDto();
+        BeanUtils.copyProperties(medicine,medicineDto);
+        log.info("Adding Medicine:{}:{}: to the inventory.",medicineDto.getMedicineId(),medicineDto.getMedicineName());
+        return medicineDto;
     }
 
     public List<MedicineDto> findAllMedicine() {
         List<Medicine> medicines = medicineRepository.findAll();
-        return medicines.stream().map(convertService::convertEntityToMedicineDto).toList();
-
+        List<MedicineDto>medicineDto=new ArrayList<>();
+        BeanUtils.copyProperties(medicines,medicineDto);
+        log.info("Retrieving all the medicine in the inventory");
+        return medicineDto;
     }
 
     public MedicineDto findMedicine(Integer id) throws MedicineNotFoundException {
-
-        MedicineDto medicine = medicineRepository.findById(id).map(convertService::convertEntityToMedicineDto).orElse(null);
+        Medicine medicine = medicineRepository.findById(id).orElse(null);
+        MedicineDto medicineDto=new MedicineDto();
         if (medicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
             throw new MedicineNotFoundException(MEDICINENOTFOUNDERROR);
         }
-
-        return medicine;
+        BeanUtils.copyProperties(medicine,medicineDto);
+        log.info("Retrieving Medicine:{}:{}: data",medicineDto.getMedicineId(),medicineDto.getMedicineName());
+        return medicineDto;
     }
 
     public MedicineDto updateMedicine(int id, UpdateMedicineDto updateMedicineDto) throws MedicineNotFoundException {
@@ -67,17 +70,17 @@ private ConvertService convertService;
             log.error(MEDICINENOTFOUNDERROR);
             throw new MedicineNotFoundException(MEDICINENOTFOUNDERROR);
         }
+        BeanUtils.copyProperties(updateMedicineDto,editMedicine);
         editMedicine.setMedicineId(editMedicine.getMedicineId());
-        editMedicine.setMedicineName(updateMedicineDto.getMedicineName());
-        editMedicine.setMedicineDescription(updateMedicineDto.getMedicineDescription());
-        editMedicine.setMedicinePrice(updateMedicineDto.getMedicinePrice());
-        editMedicine.setMedicineStock(editMedicine.getMedicineStock());
-        return convertService.convertEntityToMedicineDto(medicineRepository.save(editMedicine));
+        medicineRepository.save(editMedicine);
+        MedicineDto medicineDto=new MedicineDto();
+        BeanUtils.copyProperties(editMedicine,medicineDto);
+        log.info("{} was updated successfully.",medicineDto.getMedicineName());
+        return medicineDto;
     }
 
-    public MedicineDto reduceStock(int id, StockMedicineDto stockMedicineDto) throws MedicineNotFoundException, NegativeStockException, InputFormatException {
+    public MedicineDto reduceStock(int id, StockMedicineDto stockMedicineDto) throws MedicineNotFoundException, NegativeStockException {
         Medicine editMedicine = medicineRepository.findById(id).orElse(null);
-
         if (editMedicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
             throw new MedicineNotFoundException(MEDICINENOTFOUNDERROR);
@@ -87,16 +90,14 @@ private ConvertService convertService;
             log.error(NEGATIVESTOCKERROR);
             throw new NegativeStockException(NEGATIVESTOCKERROR);
         }
-
-        editMedicine.setMedicineId(editMedicine.getMedicineId());
-        editMedicine.setMedicineName(editMedicine.getMedicineName());
-        editMedicine.setMedicineDescription(editMedicine.getMedicineDescription());
-        editMedicine.setMedicinePrice(editMedicine.getMedicinePrice());
         editMedicine.setMedicineStock(update);
-        return convertService.convertEntityToMedicineDto(medicineRepository.save(editMedicine));
+        medicineRepository.save(editMedicine);
+        MedicineDto medicineDto=new MedicineDto();
+        BeanUtils.copyProperties(editMedicine,medicineDto);
+        log.info("Reducing Stock to {}, was updated successfully. the updated stock is now {}.",medicineDto.getMedicineName(),medicineDto.getMedicineStock());
+        return medicineDto;
     }
     public MedicineDto addStock(int id, StockMedicineDto stockMedicineDto) throws MedicineNotFoundException, NegativeStockException {
-
         Medicine editMedicine = medicineRepository.findById(id).orElse(null);
         if (editMedicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
@@ -107,12 +108,12 @@ private ConvertService convertService;
             log.error(NEGATIVESTOCKERROR);
             throw new NegativeStockException(NEGATIVESTOCKERROR);
         }
-        editMedicine.setMedicineId(editMedicine.getMedicineId());
-        editMedicine.setMedicineName(editMedicine.getMedicineName());
-        editMedicine.setMedicineDescription(editMedicine.getMedicineDescription());
-        editMedicine.setMedicinePrice(editMedicine.getMedicinePrice());
         editMedicine.setMedicineStock(update);
-        return convertService.convertEntityToMedicineDto(medicineRepository.save(editMedicine));
+        medicineRepository.save(editMedicine);
+        MedicineDto medicineDto=new MedicineDto();
+        BeanUtils.copyProperties(editMedicine,medicineDto);
+        log.info("Adding Stock to {}, was updated successfully. the updated stock is now {}.",medicineDto.getMedicineName(),medicineDto.getMedicineStock());
+        return medicineDto;
     }
     public StringBuilder deleteMedicine(int id) throws MedicineNotFoundException {
         Medicine deleteMedicine = medicineRepository.findById(id).orElse(null);
@@ -120,9 +121,12 @@ private ConvertService convertService;
             log.error(MEDICINENOTFOUNDERROR);
             throw new MedicineNotFoundException(MEDICINENOTFOUNDERROR);
         }
+        MedicineDto medicineDto=new MedicineDto();
+        BeanUtils.copyProperties(deleteMedicine,medicineDto);
+        log.info("Deleting Medicine id: {}: {}: to the inventory.",medicineDto.getMedicineId(),medicineDto.getMedicineName());
         medicineRepository.deleteById(id);
         return new StringBuilder("This medicine with the medicine id of ")
-                .append(id).append(" has been removed from the inventory.");
+                .append(id).append(" has been removed from the inventory successfully.");
     }
 
 
