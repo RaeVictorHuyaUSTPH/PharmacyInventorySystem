@@ -1,6 +1,5 @@
 package com.alpha.pharmacyinventorymanagementsystem.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
@@ -20,7 +19,7 @@ import lombok.ToString;
 @Table(name = "MEDICINE")
 public class Medicine {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "medicineId")
     private int medicineId;
     @Column(name = "medicineName")
