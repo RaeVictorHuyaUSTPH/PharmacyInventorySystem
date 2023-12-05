@@ -1,11 +1,14 @@
 package com.alpha.pharmacyinventorymanagementsystem.entity;
 
+import com.alpha.pharmacyinventorymanagementsystem.constant.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,20 +19,15 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "MEDICINE")
-public class Medicine {
+@Table(name = "USER")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "medicineId")
-    private int medicineId;
-    @Column(name = "medicineName")
-    private String medicineName;
-    @Column(name = "medicineDescription")
-    private String medicineDescription;
-    @Column(name = "medicinePrice")
-    private double medicinePrice;
-    @Column(name = "medicineStock")
-    private int medicineStock;
-    @Column(name = "medicineType")
-    private String medicineType;
+    @Column(name = "userId")
+    private int userId;
+    @Column(name = "userName")
+    private String userName;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "userRole")
+    private Role userRole;
 }

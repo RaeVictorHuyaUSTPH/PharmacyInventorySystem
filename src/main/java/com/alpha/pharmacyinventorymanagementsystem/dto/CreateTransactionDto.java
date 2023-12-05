@@ -13,8 +13,14 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class StockMedicineDto implements Serializable {
-    @Schema(example = "1", description = "This is the stock of medicine in the inventory.")
+public class CreateTransactionDto implements Serializable {
+    @Schema(example = "1", description = "This is the medicine id.")
     @NotNull
-    private int medicineStock;
+    private int medicineId;
+    @Schema(example = "1", description = "This is the user id.")
+    @NotNull
+    private int userId;
+    @Schema(example = "1", description = "This is the quantity.")
+    @NotNull
+    private int quantity;
 }

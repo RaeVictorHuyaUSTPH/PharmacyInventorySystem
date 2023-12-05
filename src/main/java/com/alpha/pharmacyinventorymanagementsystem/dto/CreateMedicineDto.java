@@ -26,4 +26,7 @@ public class CreateMedicineDto implements Serializable {
     @Schema(example = "1", description = "This is the stock of medicine in the inventory.")
     @NotNull
     private int medicineStock;
+    @Schema(example = "capsule", description = "This is the type of medicine.")
+    @NotNull
+    private String medicineType;
 }

@@ -23,4 +23,7 @@ public class UpdateMedicineDto implements Serializable {
     @Schema(example = "1.00", description = "This is the medicine price.")
     @NotNull
     private double medicinePrice;
+    @Schema(example = "capsule", description = "This is the type of medicine.")
+    @NotNull
+    private String medicineType;
 }
