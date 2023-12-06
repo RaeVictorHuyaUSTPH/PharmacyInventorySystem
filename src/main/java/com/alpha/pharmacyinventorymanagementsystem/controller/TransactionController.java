@@ -36,13 +36,14 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    @Operation(summary = "Adding transaction")
+    @Operation(summary = "Adding transaction",description = "This API endpoint allows you to add a new transaction" +
+            " by sending an HTTP POST request to localhost:8181/transaction/addTransaction.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Success, User added to the database",
+            @ApiResponse(responseCode = "200", description = "Success, Transaction added to the database.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = TransactionDto.class))}),
             @ApiResponse(responseCode = "400",
-                    description = "Bad Request, check your input if it follows the required data type",
+                    description = "Bad Request, check your input if it follows the required data type.",
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = CreateTransactionDto.class))),
             @ApiResponse(responseCode = "404", description = "Not Found, Medicine/User not found in the database.",
@@ -51,13 +52,13 @@ public class TransactionController {
                     description = "Conflict, Check whether the Medicine Stock will result in negative value.",
                     content = @Content),
             @ApiResponse(responseCode = "500",
-                    description = "Internal Database Error, There is something wrong with the Database",
+                    description = "Internal Database Error, There is something wrong with the Database.",
                     content = @Content)
     })
 
     @PostMapping("/addTransaction")
     public ResponseEntity<TransactionDto> addTransaction(@RequestBody CreateTransactionDto createTransactionDto) {
-        log.info("Adding new user");
+        log.info("Adding new transaction.");
         TransactionDto transactionDto;
         try {
             transactionDto = transactionService.pharmacyTransaction(createTransactionDto);
@@ -71,7 +72,8 @@ public class TransactionController {
         return new ResponseEntity<>(transactionDto, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Retrieving all the transaction in the database")
+    @Operation(summary = "Retrieving all the transaction in the database",description = "This endpoint retrieves a" +
+            " list of transactions. ")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Success, Retrieval of all transaction in the database was successful.",
@@ -83,11 +85,12 @@ public class TransactionController {
     })
     @GetMapping("/transactions")
     public List<TransactionRetrievedDto> findAllTransaction() {
-        log.info("Fetching all transaction");
+        log.info("Fetching all transaction.");
         return transactionService.findAllTransaction();
     }
 
-    @Operation(summary = "Retrieving specific transaction in the database")
+    @Operation(summary = "Retrieving specific transaction in the database",description = "This endpoint makes an HTTP" +
+            " GET request to localhost:8181/transaction/{id} to retrieve details of a specific transaction.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success, Transaction retrieved successfully.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
@@ -98,11 +101,11 @@ public class TransactionController {
                     description = "Internal Database Error, There is something wrong with the Database.",
                     content = @Content)
     })
-    @GetMapping("/transaction/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<TransactionRetrievedDto>
     findTransactionById(@Parameter(description = "Transaction ID that needs to be retrieved.", example = "1")
                         @PathVariable int id) {
-        log.info("Fetching specific transaction");
+        log.info("Fetching specific transaction.");
         TransactionRetrievedDto transactionRetrievedDto;
         try {
             transactionRetrievedDto = transactionService.findTransaction(id);

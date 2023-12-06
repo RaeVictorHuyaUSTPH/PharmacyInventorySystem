@@ -22,20 +22,20 @@ import java.util.List;
 public class MedicineService {
     @Autowired
     private MedicineRepository medicineRepository;
-    private static final String NEGATIVESTOCKERROR = "Stock should not be a negative value";
-    private static final String MEDICINENOTFOUNDERROR = "Medicine Not Found in the Database";
+    private static final String NEGATIVESTOCKERROR = "Stock should not be a negative value.";
+    private static final String MEDICINENOTFOUNDERROR = "Medicine Not Found in the Database.";
     private static final
-    String MEDICINETYPENOTFOUNDERROR = "Medicine With Requested Medicine Type was not found in the Database";
+    String MEDICINETYPENOTFOUNDERROR = "Medicine With Requested Medicine Type was not found in the Database.";
 
     public MedicineDto addMedicine(CreateMedicineDto createMedicineDto) throws MedicineAlreadyExistsException {
         if (medicineRepository.existsByMedicineName(createMedicineDto.getMedicineName())) {
-            String medicineExistsError = "Medicine already exists in the database";
+            String medicineExistsError = "Medicine already exists in the database.";
             log.error(medicineExistsError);
             throw new MedicineAlreadyExistsException(medicineExistsError);
         }
         Medicine medicine = new Medicine();
-        BeanUtils.copyProperties(createMedicineDto, medicine);
         medicine.setMedicineId(medicine.getMedicineId());
+        BeanUtils.copyProperties(createMedicineDto, medicine);
         medicineRepository.save(medicine);
         MedicineDto medicineDto = new MedicineDto();
         BeanUtils.copyProperties(medicine, medicineDto);
@@ -45,15 +45,12 @@ public class MedicineService {
     }
 
     public List<MedicineDto> filterMedicineByType(String medicineType) throws ElementNotFoundException {
-        List<Medicine> sortMedicine;
+        List<Medicine> sortMedicine = medicineRepository.findByMedicineType(medicineType);
         List<MedicineDto> sortMedicineDtos = new ArrayList<>();
-
-        sortMedicine = medicineRepository.findByMedicineType(medicineType);
         if (sortMedicine.isEmpty()) {
             log.error(MEDICINETYPENOTFOUNDERROR);
             throw new ElementNotFoundException(MEDICINETYPENOTFOUNDERROR);
         }
-
         for (Medicine medicine : sortMedicine) {
             MedicineDto medicineDto = new MedicineDto();
             BeanUtils.copyProperties(medicine, medicineDto);
@@ -70,19 +67,19 @@ public class MedicineService {
             BeanUtils.copyProperties(medicine, medicineDto);
             medicineDtos.add(medicineDto);
         }
-        log.info("Retrieving all the medicine in the inventory");
+        log.info("Retrieving all the medicine in the inventory.");
         return medicineDtos;
     }
 
     public MedicineDto findMedicine(Integer id) throws ElementNotFoundException {
         Medicine medicine = medicineRepository.findById(id).orElse(null);
-        MedicineDto medicineDto = new MedicineDto();
         if (medicine == null) {
             log.error(MEDICINENOTFOUNDERROR);
             throw new ElementNotFoundException(MEDICINENOTFOUNDERROR);
         }
+        MedicineDto medicineDto = new MedicineDto();
         BeanUtils.copyProperties(medicine, medicineDto);
-        log.info("Retrieving Medicine:{}:{}: data", medicineDto.getMedicineId(), medicineDto.getMedicineName());
+        log.info("Retrieving Medicine:{}:{}: data.", medicineDto.getMedicineId(), medicineDto.getMedicineName());
         return medicineDto;
     }
 
@@ -92,8 +89,9 @@ public class MedicineService {
             log.error(MEDICINENOTFOUNDERROR);
             throw new ElementNotFoundException(MEDICINENOTFOUNDERROR);
         }
-        BeanUtils.copyProperties(updateMedicineDto, editMedicine);
         editMedicine.setMedicineId(editMedicine.getMedicineId());
+        editMedicine.setMedicineStock(editMedicine.getMedicineStock());
+        BeanUtils.copyProperties(updateMedicineDto, editMedicine);
         medicineRepository.save(editMedicine);
         MedicineDto medicineDto = new MedicineDto();
         BeanUtils.copyProperties(editMedicine, medicineDto);

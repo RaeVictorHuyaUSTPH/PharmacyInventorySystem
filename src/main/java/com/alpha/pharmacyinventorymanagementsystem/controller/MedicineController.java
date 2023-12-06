@@ -45,26 +45,27 @@ public class MedicineController {
     private MedicineService medicineService;
 
 
-    @Operation(summary = "Adding medicine to the inventory")
+    @Operation(summary = "Adding medicine to the inventory", description = "This API endpoint allows you to add " +
+            "a new medicine to the pharmacy inventory.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Success,Medicine added to the inventory",
+            @ApiResponse(responseCode = "200", description = "Success,Medicine added to the inventory.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = MedicineDto.class))}),
             @ApiResponse(responseCode = "400", description = "Bad Request, check your input if it follows the " +
-                    "required data type",
+                    "required data type.",
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = CreateMedicineDto.class))),
             @ApiResponse(responseCode = "409",
-                    description = "Conflict, Check whether your medicine name is already existed in the database",
+                    description = "Conflict, Check whether your medicine name is already existed in the database.",
                     content = @Content),
             @ApiResponse(responseCode = "500",
-                    description = "Internal Database Error, There is something wrong with the Database",
+                    description = "Internal Database Error, There is something wrong with the Database.",
                     content = @Content)
     })
 
     @PostMapping("/addMedicine")
     public ResponseEntity<MedicineDto> addMedicine(@RequestBody CreateMedicineDto createMedicineDto) {
-        log.info("Adding new medicine");
+        log.info("Adding new medicine.");
         MedicineDto medicineDto;
         try {
             medicineDto = medicineService.addMedicine(createMedicineDto);
@@ -77,26 +78,25 @@ public class MedicineController {
         return new ResponseEntity<>(medicineDto, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Retrieving all the medicines in the inventory")
+    @Operation(summary = "Retrieving all the medicines in the inventory", description = "This endpoint makes" +
+            " an HTTP GET request to retrieve a list of medicines from the pharmacy. ")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Success, Retrieval of all medicine in the inventory was successful.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = MedicineDto.class))}),
-            @ApiResponse(responseCode = "409",
-                    description = "Conflict, Check whether your medicine name is already existed in the database",
-                    content = @Content),
             @ApiResponse(responseCode = "500",
                     description = "Internal Database Error, There is something wrong with the Database.",
                     content = @Content)
     })
     @GetMapping("/medicines")
     public List<MedicineDto> findAllMedicines() {
-        log.info("Fetching all medicine");
+        log.info("Fetching all medicine.");
         return medicineService.findAllMedicine();
     }
 
-    @Operation(summary = "Retrieving specific medicine in the inventory")
+    @Operation(summary = "Retrieving specific medicine in the inventory",description = "This API endpoint makes" +
+            " an HTTP GET request to fetch details of a specific medicine from the pharmacy.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success, Medicine retrieved successfully.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
@@ -111,7 +111,7 @@ public class MedicineController {
     public ResponseEntity<MedicineDto>
     findMedicineById(@Parameter(description = "Medicine ID that needs to be retrieved.", example = "1")
                      @PathVariable int id) {
-        log.info("Fetching specific medicine");
+        log.info("Fetching specific medicine.");
         MedicineDto medicineDto;
         try {
             medicineDto = medicineService.findMedicine(id);
@@ -121,12 +121,14 @@ public class MedicineController {
         return new ResponseEntity<>(medicineDto, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Retrieving specific medicine in the inventory by medicine type")
+    @Operation(summary = "Retrieving specific medicine in the inventory by medicine type.",description = "This" +
+            " endpoint makes an HTTP GET request to retrieve information about medicines of a specific type" +
+            " from the pharmacy. ")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success, Medicine retrieved successfully.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = MedicineDto.class))}),
-            @ApiResponse(responseCode = "404", description = "Not Found, Medicine not found in the inventory.",
+            @ApiResponse(responseCode = "404", description = "Not Found, Medicine Type not found in the inventory.",
                     content = @Content),
             @ApiResponse(responseCode = "500",
                     description = "Internal Database Error, There is something wrong with the Database.",
@@ -134,9 +136,10 @@ public class MedicineController {
     })
     @GetMapping("/medicine")
     public ResponseEntity<List<MedicineDto>>
-    findMedicineByMedicineType(@Parameter(description = "Medicine ID that needs to be retrieved.", example = "1")
+    findMedicineByMedicineType(@Parameter(description = "Medicine type that needs to be retrieved.",
+            example = "Capsule")
                                @RequestParam String medicineType) {
-        log.info("Fetching specific medicine");
+        log.info("Fetching specific medicine type.");
         List<MedicineDto> medicineDto;
         try {
             medicineDto = medicineService.filterMedicineByType(medicineType);
@@ -146,7 +149,8 @@ public class MedicineController {
         return new ResponseEntity<>(medicineDto, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Update existing medicine in the inventory")
+    @Operation(summary = "Update existing medicine in the inventory",description = "This endpoint allows the user to" +
+            " update the details of a specific medicine in the pharmacy.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success, Medicine data updated successfully.",
                     content = {@Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
@@ -164,7 +168,7 @@ public class MedicineController {
     public ResponseEntity<MedicineDto> updateMedicine(@Parameter(description = "Medicine ID that needs to be updated.")
                                                       @RequestParam int id,
                                                       @RequestBody UpdateMedicineDto updateMedicineDto) {
-        log.info("Update existing medicine");
+        log.info("Update existing medicine.");
         MedicineDto medicineDto;
         try {
             medicineDto = medicineService.updateMedicine(id, updateMedicineDto);
@@ -176,7 +180,8 @@ public class MedicineController {
         return new ResponseEntity<>(medicineDto, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @Operation(summary = "Removing the medicine in the inventory")
+    @Operation(summary = "Removing the medicine in the inventory",description = "This endpoint allows the user to" +
+            " delete a specific medicine in the pharmacy.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success, Successfully removing " +
                     "this medicine to the inventory.", content = {@Content}),
@@ -189,7 +194,7 @@ public class MedicineController {
     @DeleteMapping("/deleteMedicine/{id}")
     public ResponseEntity<StringBuilder>
     deleteMedicine(@Parameter(description = "Medicine ID that needs to be deleted.") @PathVariable int id) {
-        log.info("Deleting medicine");
+        log.info("Deleting medicine.");
         try {
             medicineService.deleteMedicine(id);
         } catch (ElementNotFoundException medicineNotFound) {

@@ -1,1039 +1,317 @@
-2023-12-05 10:51:53 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 13172 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 10:51:53 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 10:51:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 10:51:54 INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2023-12-05 10:51:55 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 10:51:55 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 10:51:55 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 10:51:55 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 10:51:55 INFO  - Starting service [Tomcat]
-2023-12-05 10:51:55 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 10:51:55 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 10:51:55 INFO  - Root WebApplicationContext: initialization completed in 1902 ms
-2023-12-05 10:51:55 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 10:51:55 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 10:51:55 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 10:51:56 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 10:51:56 INFO  - HikariPool-1 - Starting...
-2023-12-05 10:51:56 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@194b9783
-2023-12-05 10:51:56 INFO  - HikariPool-1 - Start completed.
-2023-12-05 10:51:57 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 10:51:57 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 10:51:58 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 10:51:59 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 10:51:59 INFO  - Started PharmacyInventorySystemApplication in 6.156 seconds (process running for 6.652)
-2023-12-05 10:52:34 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 10:52:34 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 10:52:34 INFO  - Completed initialization in 1 ms
-2023-12-05 10:52:34 INFO  - Init duration for springdoc-openapi is: 249 ms
-2023-12-05 10:54:14 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.alpha.pharmacyinventorymanagementsystem.dto.MedicineDto> com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.addMedicine(com.alpha.pharmacyinventorymanagementsystem.dto.CreateMedicineDto)]
-2023-12-05 10:54:26 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.alpha.pharmacyinventorymanagementsystem.dto.MedicineDto> com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.addMedicine(com.alpha.pharmacyinventorymanagementsystem.dto.CreateMedicineDto)]
-2023-12-05 10:56:13 INFO  - Adding new medicine
-2023-12-05 10:56:13 INFO  - Adding Medicine:3:Alaxan FR: to the inventory.
-2023-12-05 10:56:39 INFO  - Adding new medicine
-2023-12-05 10:56:39 ERROR - Medicine already exists in the database
-2023-12-05 10:57:50 INFO  - Fetching all medicine
-2023-12-05 10:57:50 INFO  - Retrieving all the medicine in the inventory
-2023-12-05 11:00:35 INFO  - Fetching specific medicine
-2023-12-05 11:00:35 INFO  - Retrieving Medicine:1:Biogesic: data
-2023-12-05 11:01:54 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.alpha.pharmacyinventorymanagementsystem.dto.MedicineDto> com.alpha.pharmacyinventorymanagementsystem.controller.MedicineController.addMedicine(com.alpha.pharmacyinventorymanagementsystem.dto.CreateMedicineDto)]
-2023-12-05 11:02:25 INFO  - Adding new medicine
-2023-12-05 11:02:25 INFO  - Adding Medicine:4:Neozep: to the inventory.
-2023-12-05 11:03:15 INFO  - Fetching specific medicine
-2023-12-05 11:03:15 INFO  - Retrieving Medicine:1:Biogesic: data
-2023-12-05 11:05:43 INFO  - Update existing medicine
-2023-12-05 11:05:43 INFO  - Bioflu was updated successfully.
-2023-12-05 11:06:31 WARN  - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2023-12-05 11:06:39 INFO  - Fetching specific medicine
-2023-12-05 11:06:39 INFO  - Retrieving Medicine:1:Bioflu: data
-2023-12-05 11:08:30 INFO  - Reducing the stock of medicine
-2023-12-05 11:08:30 INFO  - Reducing Stock to Bioflu, was updated successfully. the updated stock is now 40.
-2023-12-05 11:09:23 INFO  - Adding the stock of medicine
-2023-12-05 11:09:23 INFO  - Adding Stock to Bioflu, was updated successfully. the updated stock is now 45.
-2023-12-05 11:11:02 INFO  - Deleting medicine
-2023-12-05 11:11:02 INFO  - Deleting Medicine id: 1: Bioflu: to the inventory.
-2023-12-05 11:16:33 INFO  - Fetching specific medicine
-2023-12-05 11:16:33 ERROR - Medicine Not Found in the Database
-2023-12-05 11:18:24 INFO  - Adding the stock of medicine
-2023-12-05 11:18:24 ERROR - Medicine Not Found in the Database
-2023-12-05 11:18:31 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'k': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
-2023-12-05 11:18:38 INFO  - Adding the stock of medicine
-2023-12-05 11:18:38 ERROR - Medicine Not Found in the Database
-2023-12-05 11:22:20 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 11:22:20 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 11:22:20 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 11:22:37 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 20228 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 11:22:37 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 11:22:38 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 11:22:38 INFO  - Finished Spring Data repository scanning in 66 ms. Found 1 JPA repository interface.
-2023-12-05 11:22:39 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 11:22:39 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 11:22:39 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 11:22:39 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 11:22:39 INFO  - Starting service [Tomcat]
-2023-12-05 11:22:39 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 11:22:39 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 11:22:39 INFO  - Root WebApplicationContext: initialization completed in 2382 ms
-2023-12-05 11:22:39 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 11:22:39 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 11:22:39 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 11:22:40 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 11:22:40 INFO  - HikariPool-1 - Starting...
-2023-12-05 11:22:40 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@194b9783
-2023-12-05 11:22:40 INFO  - HikariPool-1 - Start completed.
-2023-12-05 11:22:41 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 11:22:41 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 11:22:42 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 11:22:43 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 11:22:43 INFO  - Started PharmacyInventorySystemApplication in 6.505 seconds (process running for 6.922)
-2023-12-05 11:23:23 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 11:23:23 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 11:23:23 INFO  - Completed initialization in 1 ms
-2023-12-05 11:23:23 INFO  - Fetching specific medicine
-2023-12-05 11:23:23 ERROR - Medicine Not Found in the Database
-2023-12-05 11:23:29 INFO  - Fetching specific medicine
-2023-12-05 11:23:29 INFO  - Retrieving Medicine:3:Alaxan FR: data
-2023-12-05 11:23:42 INFO  - Update existing medicine
-2023-12-05 11:23:42 ERROR - Medicine Not Found in the Database
-2023-12-05 11:24:02 INFO  - Deleting medicine
-2023-12-05 11:24:02 ERROR - Medicine Not Found in the Database
-2023-12-05 11:27:14 INFO  - Init duration for springdoc-openapi is: 227 ms
-2023-12-05 12:54:42 INFO  - Adding new medicine
-2023-12-05 12:54:42 ERROR - Medicine already exists in the database
-2023-12-05 12:56:21 INFO  - Adding new medicine
-2023-12-05 12:56:21 ERROR - Medicine already exists in the database
-2023-12-05 12:57:01 INFO  - Fetching all medicine
-2023-12-05 12:57:01 INFO  - Retrieving all the medicine in the inventory
-2023-12-05 13:04:19 INFO  - Adding new medicine
-2023-12-05 13:04:19 ERROR - Medicine already exists in the database
-2023-12-05 13:04:40 INFO  - Adding new medicine
-2023-12-05 13:04:40 ERROR - Medicine already exists in the database
-2023-12-05 13:04:43 INFO  - Adding new medicine
-2023-12-05 13:04:43 ERROR - Medicine already exists in the database
-2023-12-05 13:04:52 INFO  - Adding new medicine
-2023-12-05 13:04:52 ERROR - Medicine already exists in the database
-2023-12-05 13:05:14 INFO  - Adding new medicine
-2023-12-05 13:05:14 INFO  - Adding Medicine:5:Tuseran: to the inventory.
-2023-12-05 13:05:17 INFO  - Adding new medicine
-2023-12-05 13:05:17 ERROR - Medicine already exists in the database
-2023-12-05 13:05:39 INFO  - Adding new medicine
-2023-12-05 13:05:39 ERROR - Medicine already exists in the database
-2023-12-05 13:05:41 INFO  - Adding new medicine
-2023-12-05 13:05:41 ERROR - Medicine already exists in the database
-2023-12-05 13:05:41 INFO  - Adding new medicine
-2023-12-05 13:05:41 ERROR - Medicine already exists in the database
-2023-12-05 13:05:54 INFO  - Fetching specific medicine
-2023-12-05 13:05:54 INFO  - Retrieving Medicine:3:Alaxan FR: data
-2023-12-05 13:06:17 INFO  - Adding new medicine
-2023-12-05 13:06:17 ERROR - Medicine already exists in the database
-2023-12-05 13:07:21 INFO  - Update existing medicine
-2023-12-05 13:07:21 ERROR - Medicine Not Found in the Database
-2023-12-05 13:07:23 INFO  - Update existing medicine
-2023-12-05 13:07:23 ERROR - Medicine Not Found in the Database
-2023-12-05 13:07:28 INFO  - Adding new medicine
-2023-12-05 13:07:28 ERROR - Medicine already exists in the database
-2023-12-05 13:07:39 INFO  - Adding new medicine
-2023-12-05 13:07:39 INFO  - Adding Medicine:6:Robitusin: to the inventory.
-2023-12-05 13:08:49 INFO  - Fetching specific medicine
-2023-12-05 13:08:49 INFO  - Retrieving Medicine:3:Alaxan FR: data
-2023-12-05 13:09:02 INFO  - Update existing medicine
-2023-12-05 13:09:02 ERROR - Medicine Not Found in the Database
-2023-12-05 13:09:16 INFO  - Update existing medicine
-2023-12-05 13:09:16 INFO  - Bioflu was updated successfully.
-2023-12-05 13:10:22 INFO  - Reducing the stock of medicine
-2023-12-05 13:10:22 INFO  - Reducing Stock to Bioflu, was updated successfully. the updated stock is now 20.
-2023-12-05 13:11:18 INFO  - Adding the stock of medicine
-2023-12-05 13:11:18 INFO  - Adding Stock to Bioflu, was updated successfully. the updated stock is now 25.
-2023-12-05 13:11:53 INFO  - Deleting medicine
-2023-12-05 13:11:53 INFO  - Deleting Medicine id: 6: Robitusin: to the inventory.
-2023-12-05 13:16:40 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:16:40 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:16:40 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:16:49 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 9660 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:16:49 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:16:49 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:16:49 INFO  - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
-2023-12-05 13:16:50 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:16:50 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:16:50 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:16:50 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:16:50 INFO  - Starting service [Tomcat]
-2023-12-05 13:16:50 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:16:50 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:16:50 INFO  - Root WebApplicationContext: initialization completed in 1539 ms
-2023-12-05 13:16:50 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:16:50 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:16:50 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:16:51 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:16:51 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:16:51 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aac0a47
-2023-12-05 13:16:51 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:16:52 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:16:52 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:16:52 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:16:53 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:16:53 INFO  - Started PharmacyInventorySystemApplication in 4.78 seconds (process running for 5.151)
-2023-12-05 13:16:53 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:16:53 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:16:53 INFO  - Completed initialization in 1 ms
-2023-12-05 13:16:54 INFO  - Init duration for springdoc-openapi is: 255 ms
-2023-12-05 13:27:16 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:27:16 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:27:16 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:27:23 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 18644 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:27:23 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:27:24 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:27:24 INFO  - Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
-2023-12-05 13:27:25 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:27:25 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:27:25 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:27:25 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:27:25 INFO  - Starting service [Tomcat]
-2023-12-05 13:27:25 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:27:25 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:27:25 INFO  - Root WebApplicationContext: initialization completed in 1513 ms
-2023-12-05 13:27:25 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:27:25 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:27:25 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:27:25 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:27:25 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:27:26 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63cf578f
-2023-12-05 13:27:26 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:27:26 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:27:26 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:27:27 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:27:28 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:27:28 INFO  - Started PharmacyInventorySystemApplication in 4.826 seconds (process running for 5.189)
-2023-12-05 13:27:32 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:27:32 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:27:32 INFO  - Completed initialization in 1 ms
-2023-12-05 13:27:33 INFO  - Init duration for springdoc-openapi is: 222 ms
-2023-12-05 13:32:06 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:32:06 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:32:06 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:32:47 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 9540 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:32:47 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:32:48 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:32:48 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
-2023-12-05 13:32:49 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:32:49 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:32:49 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:32:49 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:32:49 INFO  - Starting service [Tomcat]
-2023-12-05 13:32:49 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:32:49 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:32:49 INFO  - Root WebApplicationContext: initialization completed in 1418 ms
-2023-12-05 13:32:49 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:32:49 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:32:49 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:32:49 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:32:49 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:32:50 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@586728e8
-2023-12-05 13:32:50 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:32:50 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:32:50 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:32:51 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:32:52 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:32:52 INFO  - Started PharmacyInventorySystemApplication in 4.611 seconds (process running for 5.019)
-2023-12-05 13:32:56 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:32:56 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:32:56 INFO  - Completed initialization in 2 ms
-2023-12-05 13:32:57 INFO  - Init duration for springdoc-openapi is: 263 ms
-2023-12-05 13:34:30 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:34:30 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:34:30 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:34:38 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 8784 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:34:38 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:34:39 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:34:39 INFO  - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
-2023-12-05 13:34:40 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:34:40 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:34:40 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:34:40 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:34:40 INFO  - Starting service [Tomcat]
-2023-12-05 13:34:40 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:34:40 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:34:40 INFO  - Root WebApplicationContext: initialization completed in 1470 ms
-2023-12-05 13:34:40 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:34:40 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:34:40 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:34:40 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:34:40 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:34:41 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aac0a47
-2023-12-05 13:34:41 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:34:41 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:34:41 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:34:42 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:34:43 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:34:43 INFO  - Started PharmacyInventorySystemApplication in 4.723 seconds (process running for 5.128)
-2023-12-05 13:34:43 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:34:43 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:34:43 INFO  - Completed initialization in 1 ms
-2023-12-05 13:34:43 INFO  - Init duration for springdoc-openapi is: 237 ms
-2023-12-05 13:43:05 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:43:05 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:43:05 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:43:31 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 7960 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:43:31 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:43:31 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:43:31 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
-2023-12-05 13:43:32 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:43:32 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:43:32 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:43:32 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:43:32 INFO  - Starting service [Tomcat]
-2023-12-05 13:43:32 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:43:32 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:43:32 INFO  - Root WebApplicationContext: initialization completed in 1398 ms
-2023-12-05 13:43:32 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:43:32 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:43:32 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:43:33 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:43:33 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:43:33 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ad6f98e
-2023-12-05 13:43:33 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:43:34 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:43:34 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:43:34 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:43:35 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:43:35 INFO  - Started PharmacyInventorySystemApplication in 4.707 seconds (process running for 5.135)
-2023-12-05 13:43:56 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:43:56 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:43:56 INFO  - Completed initialization in 1 ms
-2023-12-05 13:43:56 INFO  - Init duration for springdoc-openapi is: 310 ms
-2023-12-05 13:44:30 INFO  - Fetching all medicine
-2023-12-05 13:44:31 INFO  - Retrieving all the medicine in the inventory
-2023-12-05 13:58:24 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:58:24 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 13:58:24 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 13:58:34 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 8316 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 13:58:34 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 13:58:35 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 13:58:35 INFO  - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
-2023-12-05 13:58:35 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 13:58:35 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 13:58:35 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 13:58:35 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 13:58:35 INFO  - Starting service [Tomcat]
-2023-12-05 13:58:35 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 13:58:35 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 13:58:35 INFO  - Root WebApplicationContext: initialization completed in 1656 ms
-2023-12-05 13:58:36 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 13:58:36 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 13:58:36 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 13:58:36 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 13:58:36 INFO  - HikariPool-1 - Starting...
-2023-12-05 13:58:36 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@194911c1
-2023-12-05 13:58:36 INFO  - HikariPool-1 - Start completed.
-2023-12-05 13:58:37 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 13:58:37 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 13:58:38 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 13:58:39 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 13:58:39 INFO  - Started PharmacyInventorySystemApplication in 5.274 seconds (process running for 5.701)
-2023-12-05 13:58:39 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 13:58:39 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 13:58:39 INFO  - Completed initialization in 1 ms
-2023-12-05 13:58:39 INFO  - Init duration for springdoc-openapi is: 259 ms
-2023-12-05 14:00:21 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:00:21 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 14:00:21 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 14:00:27 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 1724 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 14:00:27 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 14:00:28 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 14:00:28 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
-2023-12-05 14:00:29 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 14:00:29 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 14:00:29 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 14:00:29 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 14:00:29 INFO  - Starting service [Tomcat]
-2023-12-05 14:00:29 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 14:00:29 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 14:00:29 INFO  - Root WebApplicationContext: initialization completed in 1536 ms
-2023-12-05 14:00:29 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 14:00:29 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 14:00:29 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 14:00:29 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 14:00:29 INFO  - HikariPool-1 - Starting...
-2023-12-05 14:00:29 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aac0a47
-2023-12-05 14:00:29 INFO  - HikariPool-1 - Start completed.
-2023-12-05 14:00:30 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 14:00:30 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:00:31 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 14:00:31 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 14:00:31 INFO  - Started PharmacyInventorySystemApplication in 4.736 seconds (process running for 5.162)
-2023-12-05 14:00:31 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 14:00:31 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 14:00:31 INFO  - Completed initialization in 1 ms
-2023-12-05 14:00:32 INFO  - Init duration for springdoc-openapi is: 236 ms
-2023-12-05 14:01:12 WARN  - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "{id}"]
-2023-12-05 14:01:13 WARN  - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "{id}"]
-2023-12-05 14:02:46 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:02:46 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 14:02:46 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 14:02:53 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 17560 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 14:02:53 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 14:02:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 14:02:54 INFO  - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
-2023-12-05 14:02:55 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 14:02:55 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 14:02:55 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 14:02:55 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 14:02:55 INFO  - Starting service [Tomcat]
-2023-12-05 14:02:55 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 14:02:55 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 14:02:55 INFO  - Root WebApplicationContext: initialization completed in 1553 ms
-2023-12-05 14:02:55 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 14:02:55 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 14:02:55 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 14:02:55 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 14:02:55 INFO  - HikariPool-1 - Starting...
-2023-12-05 14:02:56 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@249b54af
-2023-12-05 14:02:56 INFO  - HikariPool-1 - Start completed.
-2023-12-05 14:02:57 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 14:02:57 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:02:57 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 14:02:58 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 14:02:58 INFO  - Started PharmacyInventorySystemApplication in 4.892 seconds (process running for 5.34)
-2023-12-05 14:02:58 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 14:02:58 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 14:02:58 INFO  - Completed initialization in 1 ms
-2023-12-05 14:02:58 INFO  - Init duration for springdoc-openapi is: 241 ms
-2023-12-05 14:03:15 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:03:15 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 14:03:15 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 14:03:25 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 14284 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 14:03:25 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 14:03:26 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 14:03:26 INFO  - Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interface.
-2023-12-05 14:03:27 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 14:03:27 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 14:03:27 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 14:03:27 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 14:03:27 INFO  - Starting service [Tomcat]
-2023-12-05 14:03:27 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 14:03:27 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 14:03:27 INFO  - Root WebApplicationContext: initialization completed in 1414 ms
-2023-12-05 14:03:27 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 14:03:27 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 14:03:27 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 14:03:27 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 14:03:27 INFO  - HikariPool-1 - Starting...
-2023-12-05 14:03:27 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72324965
-2023-12-05 14:03:27 INFO  - HikariPool-1 - Start completed.
-2023-12-05 14:03:28 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 14:03:28 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:03:29 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 14:03:30 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 14:03:30 INFO  - Started PharmacyInventorySystemApplication in 4.685 seconds (process running for 5.085)
-2023-12-05 14:03:32 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 14:03:32 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 14:03:32 INFO  - Completed initialization in 1 ms
-2023-12-05 14:03:33 INFO  - Init duration for springdoc-openapi is: 262 ms
-2023-12-05 14:04:06 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:04:06 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 14:04:07 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 14:04:16 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 15908 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 14:04:16 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 14:04:17 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 14:04:17 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
-2023-12-05 14:04:18 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 14:04:18 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 14:04:18 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 14:04:18 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 14:04:18 INFO  - Starting service [Tomcat]
-2023-12-05 14:04:18 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 14:04:18 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 14:04:18 INFO  - Root WebApplicationContext: initialization completed in 1535 ms
-2023-12-05 14:04:18 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 14:04:18 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 14:04:18 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 14:04:18 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 14:04:18 INFO  - HikariPool-1 - Starting...
-2023-12-05 14:04:18 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6785c9fa
-2023-12-05 14:04:18 INFO  - HikariPool-1 - Start completed.
-2023-12-05 14:04:19 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 14:04:19 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:04:20 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 14:04:21 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 14:04:21 INFO  - Started PharmacyInventorySystemApplication in 4.876 seconds (process running for 5.239)
-2023-12-05 14:04:22 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 14:04:22 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 14:04:22 INFO  - Completed initialization in 1 ms
-2023-12-05 14:04:22 INFO  - Init duration for springdoc-openapi is: 239 ms
-2023-12-05 14:04:56 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:04:56 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 14:04:56 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 14:05:04 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 17292 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 14:05:04 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 14:05:04 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 14:05:04 INFO  - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
-2023-12-05 14:05:05 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 14:05:05 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 14:05:05 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 14:05:05 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 14:05:05 INFO  - Starting service [Tomcat]
-2023-12-05 14:05:05 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 14:05:05 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 14:05:05 INFO  - Root WebApplicationContext: initialization completed in 1474 ms
-2023-12-05 14:05:05 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 14:05:05 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 14:05:05 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 14:05:06 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 14:05:06 INFO  - HikariPool-1 - Starting...
-2023-12-05 14:05:06 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@586728e8
-2023-12-05 14:05:06 INFO  - HikariPool-1 - Start completed.
-2023-12-05 14:05:07 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 14:05:07 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 14:05:07 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 14:05:08 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 14:05:08 INFO  - Started PharmacyInventorySystemApplication in 4.737 seconds (process running for 5.148)
-2023-12-05 14:05:08 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 14:05:08 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 14:05:08 INFO  - Completed initialization in 1 ms
-2023-12-05 14:05:08 INFO  - Init duration for springdoc-openapi is: 241 ms
-2023-12-05 14:20:50 INFO  - Fetching specific medicine
-2023-12-05 14:20:50 ERROR - Medicine Not Found in the Database
-2023-12-05 14:20:52 INFO  - Fetching specific medicine
-2023-12-05 14:20:52 ERROR - Medicine Not Found in the Database
-2023-12-05 14:20:53 INFO  - Fetching specific medicine
-2023-12-05 14:20:53 ERROR - Medicine Not Found in the Database
-2023-12-05 14:21:00 INFO  - Adding new medicine
-2023-12-05 14:21:01 INFO  - Adding Medicine:1:Robitusin: to the inventory.
-2023-12-05 14:21:10 INFO  - Fetching specific medicine
-2023-12-05 14:21:10 INFO  - Retrieving Medicine:1:Robitusin: data
-2023-12-05 14:36:51 INFO  - Fetching specific medicine
-2023-12-05 14:36:51 INFO  - Retrieving Medicine:1:Robitusin: data
-2023-12-05 14:38:02 INFO  - Update existing medicine
-2023-12-05 14:38:02 INFO  - Bioflu was updated successfully.
-2023-12-05 14:44:38 INFO  - Update existing medicine
-2023-12-05 14:44:38 INFO  - Bioflu was updated successfully.
-2023-12-05 15:36:06 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 15:36:06 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 15:36:06 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 16:02:18 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 20376 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 16:02:18 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 16:02:19 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 16:02:19 INFO  - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
-2023-12-05 16:02:19 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 16:02:19 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 16:02:19 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 16:02:19 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 16:02:19 INFO  - Starting service [Tomcat]
-2023-12-05 16:02:19 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 16:02:19 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 16:02:19 INFO  - Root WebApplicationContext: initialization completed in 1646 ms
-2023-12-05 16:02:20 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 16:02:20 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 16:02:20 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 16:02:20 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 16:02:20 INFO  - HikariPool-1 - Starting...
-2023-12-05 16:02:20 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@210a26b
-2023-12-05 16:02:20 INFO  - HikariPool-1 - Start completed.
-2023-12-05 16:02:21 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 16:02:21 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 16:02:22 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 16:02:22 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 16:02:22 INFO  - Started PharmacyInventorySystemApplication in 4.934 seconds (process running for 5.432)
-2023-12-05 16:02:39 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 16:02:39 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 16:02:39 INFO  - Completed initialization in 1 ms
-2023-12-05 16:02:40 INFO  - Init duration for springdoc-openapi is: 248 ms
-2023-12-05 16:03:37 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 16:03:37 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 16:03:37 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 16:03:52 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 12216 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 16:03:52 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 16:03:52 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 16:03:53 INFO  - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
-2023-12-05 16:03:53 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 16:03:53 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 16:03:53 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 16:03:53 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 16:03:53 INFO  - Starting service [Tomcat]
-2023-12-05 16:03:53 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 16:03:53 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 16:03:53 INFO  - Root WebApplicationContext: initialization completed in 1495 ms
-2023-12-05 16:03:53 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 16:03:53 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 16:03:54 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 16:03:54 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 16:03:54 INFO  - HikariPool-1 - Starting...
-2023-12-05 16:03:54 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aac0a47
-2023-12-05 16:03:54 INFO  - HikariPool-1 - Start completed.
-2023-12-05 16:03:55 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 16:03:55 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 16:03:55 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 16:03:56 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 16:03:56 INFO  - Started PharmacyInventorySystemApplication in 4.788 seconds (process running for 5.177)
-2023-12-05 16:03:59 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 16:03:59 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 16:03:59 INFO  - Completed initialization in 1 ms
-2023-12-05 16:04:00 INFO  - Init duration for springdoc-openapi is: 240 ms
-2023-12-05 16:04:41 INFO  - Adding new medicine
-2023-12-05 16:04:41 INFO  - Adding Medicine:1:Biogesic: to the inventory.
-2023-12-05 16:04:43 INFO  - Adding new medicine
-2023-12-05 16:04:43 ERROR - Medicine already exists in the database
-2023-12-05 16:05:10 INFO  - Adding new medicine
-2023-12-05 16:05:10 INFO  - Adding Medicine:2:Tuseran: to the inventory.
-2023-12-05 16:05:37 INFO  - Adding new medicine
-2023-12-05 16:05:37 INFO  - Adding Medicine:3:Neozep: to the inventory.
-2023-12-05 16:06:07 INFO  - Adding new medicine
-2023-12-05 16:06:07 INFO  - Adding Medicine:4:Tempra: to the inventory.
-2023-12-05 16:06:36 INFO  - Adding new medicine
-2023-12-05 16:06:36 INFO  - Adding Medicine:5:Ascof Lagundi: to the inventory.
-2023-12-05 16:06:57 INFO  - Fetching specific medicine
-2023-12-05 16:07:08 INFO  - Fetching specific medicine
-2023-12-05 16:07:16 INFO  - Fetching specific medicine
-2023-12-05 16:07:21 INFO  - Fetching specific medicine
-2023-12-05 16:11:17 INFO  - Fetching specific medicine
-2023-12-05 16:11:32 INFO  - Fetching specific medicine
-2023-12-05 16:13:19 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 16:13:19 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 16:13:19 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 16:13:25 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 11664 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 16:13:25 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 16:13:26 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 16:13:26 INFO  - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
-2023-12-05 16:13:27 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 16:13:27 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 16:13:27 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 16:13:27 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 16:13:27 INFO  - Starting service [Tomcat]
-2023-12-05 16:13:27 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 16:13:27 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 16:13:27 INFO  - Root WebApplicationContext: initialization completed in 1591 ms
-2023-12-05 16:13:27 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 16:13:27 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 16:13:27 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 16:13:27 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 16:13:27 INFO  - HikariPool-1 - Starting...
-2023-12-05 16:13:28 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b3ad7ca
-2023-12-05 16:13:28 INFO  - HikariPool-1 - Start completed.
-2023-12-05 16:13:28 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 16:13:28 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 16:13:29 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 16:13:30 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 16:13:30 INFO  - Started PharmacyInventorySystemApplication in 4.899 seconds (process running for 5.363)
-2023-12-05 16:13:30 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 16:13:30 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 16:13:30 INFO  - Completed initialization in 1 ms
-2023-12-05 16:13:30 INFO  - Init duration for springdoc-openapi is: 276 ms
-2023-12-05 16:13:47 INFO  - Fetching specific medicine
-2023-12-05 16:13:50 INFO  - Fetching specific medicine
-2023-12-05 16:13:50 ERROR - Medicine With Requested Medicine Type was not found in the Database
-2023-12-05 18:38:04 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:38:04 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 18:38:04 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 18:38:16 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 15756 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 18:38:16 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 18:38:16 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 18:38:17 INFO  - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
-2023-12-05 18:38:17 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 18:38:17 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 18:38:17 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 18:38:17 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 18:38:17 INFO  - Starting service [Tomcat]
-2023-12-05 18:38:17 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 18:38:17 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 18:38:17 INFO  - Root WebApplicationContext: initialization completed in 1489 ms
-2023-12-05 18:38:17 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 18:38:17 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 18:38:18 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 18:38:18 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 18:38:18 INFO  - HikariPool-1 - Starting...
-2023-12-05 18:38:18 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2109a691
-2023-12-05 18:38:18 INFO  - HikariPool-1 - Start completed.
-2023-12-05 18:38:19 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 18:38:19 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:38:19 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 18:38:20 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 18:38:20 INFO  - Started PharmacyInventorySystemApplication in 4.933 seconds (process running for 5.307)
-2023-12-05 18:38:24 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 18:38:24 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 18:38:24 INFO  - Completed initialization in 1 ms
-2023-12-05 18:38:25 INFO  - Init duration for springdoc-openapi is: 293 ms
-2023-12-05 18:38:45 INFO  - Adding new user
-2023-12-05 18:38:45 INFO  - Adding User:1:name1: to the database.
-2023-12-05 18:38:57 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.alpha.pharmacyinventorymanagementsystem.constant.Role` from String "customer": not one of the values accepted for Enum class: [PHARMACIST, CUSTOMER]]
-2023-12-05 18:45:19 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:45:19 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 18:45:19 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 18:45:30 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 15100 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 18:45:30 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 18:45:30 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 18:45:30 INFO  - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
-2023-12-05 18:45:31 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 18:45:31 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 18:45:31 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 18:45:31 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 18:45:31 INFO  - Starting service [Tomcat]
-2023-12-05 18:45:31 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 18:45:31 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 18:45:31 INFO  - Root WebApplicationContext: initialization completed in 1489 ms
-2023-12-05 18:45:31 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 18:45:31 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 18:45:31 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 18:45:32 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 18:45:32 INFO  - HikariPool-1 - Starting...
-2023-12-05 18:45:32 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fde1d64
-2023-12-05 18:45:32 INFO  - HikariPool-1 - Start completed.
-2023-12-05 18:45:33 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 18:45:33 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:45:33 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 18:45:34 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 18:45:34 INFO  - Started PharmacyInventorySystemApplication in 5.006 seconds (process running for 5.401)
-2023-12-05 18:45:35 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 18:45:35 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 18:45:35 INFO  - Completed initialization in 1 ms
-2023-12-05 18:45:35 INFO  - Init duration for springdoc-openapi is: 282 ms
-2023-12-05 18:45:53 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.alpha.pharmacyinventorymanagementsystem.constant.Role` from String "customer": not one of the values accepted for Enum class: [PHARMACIST, CUSTOMER]]
-2023-12-05 18:46:25 INFO  - Adding new user
-2023-12-05 18:46:25 INFO  - Adding User:2:name2: to the database.
-2023-12-05 18:47:05 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.alpha.pharmacyinventorymanagementsystem.constant.Role` from String "Customer": not one of the values accepted for Enum class: [PHARMACIST, CUSTOMER]]
-2023-12-05 18:48:17 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:48:17 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 18:48:17 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 18:48:23 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 28352 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 18:48:23 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 18:48:23 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 18:48:23 INFO  - Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
-2023-12-05 18:48:24 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 18:48:24 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 18:48:24 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 18:48:24 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 18:48:24 INFO  - Starting service [Tomcat]
-2023-12-05 18:48:24 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 18:48:24 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 18:48:24 INFO  - Root WebApplicationContext: initialization completed in 1611 ms
-2023-12-05 18:48:24 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 18:48:24 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 18:48:24 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 18:48:25 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 18:48:25 INFO  - HikariPool-1 - Starting...
-2023-12-05 18:48:25 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e46891d
-2023-12-05 18:48:25 INFO  - HikariPool-1 - Start completed.
-2023-12-05 18:48:26 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 18:48:26 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:48:26 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 18:48:27 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 18:48:27 INFO  - Started PharmacyInventorySystemApplication in 5.053 seconds (process running for 5.452)
-2023-12-05 18:48:27 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 18:48:27 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 18:48:27 INFO  - Completed initialization in 1 ms
-2023-12-05 18:48:28 INFO  - Init duration for springdoc-openapi is: 275 ms
-2023-12-05 18:48:42 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.alpha.pharmacyinventorymanagementsystem.constant.Role` from String "CUSTOMEr": not one of the values accepted for Enum class: [PHARMACIST, CUSTOMER]]
-2023-12-05 18:49:18 INFO  - Adding new user
-2023-12-05 18:49:18 INFO  - Adding User:3:name3: to the database.
-2023-12-05 18:49:31 INFO  - Fetching all user
-2023-12-05 18:49:31 INFO  - Retrieving all the user in the database
-2023-12-05 18:50:04 INFO  - Fetching specific user
-2023-12-05 18:50:04 INFO  - Retrieving User:1:name1: data
-2023-12-05 18:50:08 INFO  - Fetching specific user
-2023-12-05 18:50:08 ERROR - User Not Found in the Database
-2023-12-05 18:50:13 INFO  - Fetching specific user
-2023-12-05 18:50:13 INFO  - Retrieving User:1:name1: data
-2023-12-05 18:50:46 INFO  - Deleting User
-2023-12-05 18:50:46 ERROR - User Not Found in the Database
-2023-12-05 18:50:51 INFO  - Deleting User
-2023-12-05 18:50:51 INFO  - Deleting User id: 2: name2: to the database.
-2023-12-05 18:50:58 INFO  - Deleting User
-2023-12-05 18:50:58 ERROR - User Not Found in the Database
-2023-12-05 18:52:01 INFO  - Adding new user
-2023-12-05 18:52:01 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 35.
-2023-12-05 18:52:01 WARN  - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
-2023-12-05 18:54:22 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:54:22 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 18:54:22 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 18:54:31 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 6596 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 18:54:31 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 18:54:31 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 18:54:31 INFO  - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
-2023-12-05 18:54:32 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 18:54:32 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 18:54:32 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 18:54:32 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 18:54:32 INFO  - Starting service [Tomcat]
-2023-12-05 18:54:32 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 18:54:32 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 18:54:32 INFO  - Root WebApplicationContext: initialization completed in 1595 ms
-2023-12-05 18:54:32 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 18:54:32 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 18:54:33 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 18:54:33 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 18:54:33 INFO  - HikariPool-1 - Starting...
-2023-12-05 18:54:33 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@984de01
-2023-12-05 18:54:33 INFO  - HikariPool-1 - Start completed.
-2023-12-05 18:54:34 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 18:54:34 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 18:54:34 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 18:54:35 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 18:54:35 INFO  - Started PharmacyInventorySystemApplication in 5.088 seconds (process running for 5.492)
-2023-12-05 18:54:36 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 18:54:36 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 18:54:36 INFO  - Completed initialization in 1 ms
-2023-12-05 18:54:36 INFO  - Init duration for springdoc-openapi is: 256 ms
-2023-12-05 18:54:58 INFO  - Adding new user
-2023-12-05 18:54:58 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 34.
-2023-12-05 18:54:58 WARN  - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
-2023-12-05 18:56:57 INFO  - Adding new user
-2023-12-05 18:56:57 INFO  - Reducing Stock to Tuseran, was updated successfully. the updated stock is now 34.
-2023-12-05 18:56:57 WARN  - Resolved [org.springframework.web.HttpMediaTypeNotAcceptableException: No acceptable representation]
-2023-12-05 19:04:29 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:04:29 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 19:04:29 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 19:04:56 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 3856 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 19:04:56 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 19:04:57 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 19:04:57 INFO  - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
-2023-12-05 19:04:57 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 19:04:57 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 19:04:57 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 19:04:57 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 19:04:57 INFO  - Starting service [Tomcat]
-2023-12-05 19:04:57 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 19:04:57 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 19:04:57 INFO  - Root WebApplicationContext: initialization completed in 1516 ms
-2023-12-05 19:04:58 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 19:04:58 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 19:04:58 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 19:04:58 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 19:04:58 INFO  - HikariPool-1 - Starting...
-2023-12-05 19:04:58 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b40fe6
-2023-12-05 19:04:58 INFO  - HikariPool-1 - Start completed.
-2023-12-05 19:04:59 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 19:04:59 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:05:00 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 19:05:00 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 19:05:00 INFO  - Started PharmacyInventorySystemApplication in 5.12 seconds (process running for 5.531)
-2023-12-05 19:07:55 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:07:55 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 19:07:55 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 19:09:34 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 10148 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 19:09:34 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 19:09:35 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 19:09:35 INFO  - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
-2023-12-05 19:09:36 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 19:09:36 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 19:09:36 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 19:09:36 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 19:09:36 INFO  - Starting service [Tomcat]
-2023-12-05 19:09:36 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 19:09:36 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 19:09:36 INFO  - Root WebApplicationContext: initialization completed in 1581 ms
-2023-12-05 19:09:36 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 19:09:36 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 19:09:36 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 19:09:36 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 19:09:36 INFO  - HikariPool-1 - Starting...
-2023-12-05 19:09:37 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79cdf2d4
-2023-12-05 19:09:37 INFO  - HikariPool-1 - Start completed.
-2023-12-05 19:09:37 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 19:09:37 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:09:38 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 19:09:39 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 19:09:39 INFO  - Started PharmacyInventorySystemApplication in 5.157 seconds (process running for 5.572)
-2023-12-05 19:09:40 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 19:09:40 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 19:09:40 INFO  - Completed initialization in 1 ms
-2023-12-05 19:09:41 INFO  - Init duration for springdoc-openapi is: 287 ms
-2023-12-05 19:09:45 INFO  - Adding new user
-2023-12-05 19:09:45 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 33.
-2023-12-05 19:12:14 INFO  - Adding new user
-2023-12-05 19:12:14 INFO  - Adding Stock to Biogesic, was updated successfully. the updated stock is now 38.
-2023-12-05 19:13:50 INFO  - Fetching all user
-2023-12-05 19:13:50 INFO  - Retrieving all the user in the database
-2023-12-05 19:14:01 INFO  - Adding new user
-2023-12-05 19:14:01 ERROR - User Not Found in the Database
-2023-12-05 19:14:57 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:14:57 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 19:14:57 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 19:15:03 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 25632 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 19:15:03 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 19:15:04 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 19:15:04 INFO  - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
-2023-12-05 19:15:04 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 19:15:04 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 19:15:04 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 19:15:04 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 19:15:04 INFO  - Starting service [Tomcat]
-2023-12-05 19:15:04 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 19:15:04 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 19:15:04 INFO  - Root WebApplicationContext: initialization completed in 1547 ms
-2023-12-05 19:15:05 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 19:15:05 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 19:15:05 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 19:15:05 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 19:15:05 INFO  - HikariPool-1 - Starting...
-2023-12-05 19:15:05 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48632f69
-2023-12-05 19:15:05 INFO  - HikariPool-1 - Start completed.
-2023-12-05 19:15:06 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 19:15:06 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 19:15:07 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 19:15:07 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 19:15:07 INFO  - Started PharmacyInventorySystemApplication in 5.012 seconds (process running for 5.414)
-2023-12-05 19:15:08 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 19:15:08 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 19:15:08 INFO  - Completed initialization in 1 ms
-2023-12-05 19:15:08 INFO  - Init duration for springdoc-openapi is: 297 ms
-2023-12-05 19:15:30 INFO  - Adding new user
-2023-12-05 19:15:30 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 37.
-2023-12-05 19:16:05 INFO  - Adding new user
-2023-12-05 19:16:05 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 36.
-2023-12-05 19:16:28 INFO  - Adding new user
-2023-12-05 19:16:28 INFO  - Adding Stock to Biogesic, was updated successfully. the updated stock is now 37.
-2023-12-05 19:16:40 INFO  - Adding new user
-2023-12-05 19:16:40 INFO  - Adding Stock to Biogesic, was updated successfully. the updated stock is now 39.
-2023-12-05 19:16:57 INFO  - Adding new user
-2023-12-05 19:16:57 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 37.
-2023-12-05 19:17:21 INFO  - Adding new user
-2023-12-05 19:17:21 ERROR - Stock should not be a negative value
-2023-12-05 20:21:46 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 20:21:46 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 20:21:46 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 20:22:31 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 26972 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 20:22:31 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 20:22:32 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 20:22:32 INFO  - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
-2023-12-05 20:22:33 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 20:22:33 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 20:22:33 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 20:22:33 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 20:22:33 INFO  - Starting service [Tomcat]
-2023-12-05 20:22:33 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 20:22:33 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 20:22:33 INFO  - Root WebApplicationContext: initialization completed in 1899 ms
-2023-12-05 20:22:33 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 20:22:33 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 20:22:33 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 20:22:33 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 20:22:33 INFO  - HikariPool-1 - Starting...
-2023-12-05 20:22:34 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fde1d64
-2023-12-05 20:22:34 INFO  - HikariPool-1 - Start completed.
-2023-12-05 20:22:34 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 20:22:35 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 20:22:35 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 20:22:36 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 20:22:36 INFO  - Started PharmacyInventorySystemApplication in 5.407 seconds (process running for 5.768)
-2023-12-05 20:22:37 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 20:22:37 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 20:22:37 INFO  - Completed initialization in 1 ms
-2023-12-05 20:22:38 INFO  - Init duration for springdoc-openapi is: 269 ms
-2023-12-05 20:29:34 INFO  - Fetching all user
-2023-12-05 20:29:35 INFO  - Retrieving all the user in the database
-2023-12-05 20:30:58 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 20:30:58 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 20:30:58 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 20:31:04 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 8580 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 20:31:04 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 20:31:05 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 20:31:05 INFO  - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
-2023-12-05 20:31:06 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 20:31:06 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 20:31:06 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 20:31:06 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 20:31:06 INFO  - Starting service [Tomcat]
-2023-12-05 20:31:06 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 20:31:06 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 20:31:06 INFO  - Root WebApplicationContext: initialization completed in 1565 ms
-2023-12-05 20:31:06 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 20:31:06 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 20:31:06 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 20:31:07 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 20:31:07 INFO  - HikariPool-1 - Starting...
-2023-12-05 20:31:07 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7198ab9a
-2023-12-05 20:31:07 INFO  - HikariPool-1 - Start completed.
-2023-12-05 20:31:08 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 20:31:08 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 20:31:08 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 20:31:09 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 20:31:09 INFO  - Started PharmacyInventorySystemApplication in 5.066 seconds (process running for 5.484)
-2023-12-05 20:31:09 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 20:31:09 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 20:31:09 INFO  - Completed initialization in 0 ms
-2023-12-05 20:31:10 INFO  - Init duration for springdoc-openapi is: 286 ms
-2023-12-05 20:31:56 INFO  - Fetching specific user
-2023-12-05 20:31:56 ERROR - User Not Found in the Database
-2023-12-05 20:32:06 INFO  - Fetching specific user
-2023-12-05 20:32:06 INFO  - Retrieving User:3:name3: data
-2023-12-05 21:53:25 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 21:53:25 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 21:53:25 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 21:53:35 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 28500 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 21:53:35 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 21:53:36 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 21:53:36 INFO  - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
-2023-12-05 21:53:36 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 21:53:36 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 21:53:36 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 21:53:36 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 21:53:36 INFO  - Starting service [Tomcat]
-2023-12-05 21:53:36 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 21:53:37 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 21:53:37 INFO  - Root WebApplicationContext: initialization completed in 1486 ms
-2023-12-05 21:53:37 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 21:53:37 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 21:53:37 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 21:53:37 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 21:53:37 INFO  - HikariPool-1 - Starting...
-2023-12-05 21:53:37 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75dd0f94
-2023-12-05 21:53:37 INFO  - HikariPool-1 - Start completed.
-2023-12-05 21:53:38 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 21:53:38 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 21:53:39 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 21:53:39 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 21:53:39 INFO  - Started PharmacyInventorySystemApplication in 4.7 seconds (process running for 5.091)
-2023-12-05 21:53:41 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 21:53:41 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 21:53:41 INFO  - Completed initialization in 1 ms
-2023-12-05 21:53:41 INFO  - Init duration for springdoc-openapi is: 291 ms
-2023-12-05 21:53:51 INFO  - Fetching specific transaction
-2023-12-05 21:53:51 INFO  - Retrieving Transaction:1: data
-2023-12-05 21:53:56 INFO  - Fetching specific transaction
-2023-12-05 21:53:56 INFO  - Retrieving Transaction:1: data
-2023-12-05 21:54:03 INFO  - Fetching specific transaction
-2023-12-05 21:54:03 ERROR - Transaction Not Found in the Database
-2023-12-05 21:54:15 INFO  - Fetching all transaction
-2023-12-05 21:54:15 INFO  - Retrieving all the transactions in the database
-2023-12-05 21:55:07 INFO  - Adding new user
-2023-12-05 21:55:07 ERROR - Medicine Not Found in the Database
-2023-12-05 21:55:30 INFO  - Adding new user
-2023-12-05 21:55:30 ERROR - Stock should not be a negative value
-2023-12-05 21:56:09 INFO  - Adding new user
-2023-12-05 21:56:09 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 7.
-2023-12-05 21:56:41 INFO  - Adding new user
-2023-12-05 21:56:41 ERROR - User Not Found in the Database
-2023-12-05 21:56:50 INFO  - Adding new user
-2023-12-05 21:56:50 INFO  - Adding Stock to Biogesic, was updated successfully. the updated stock is now 37.
-2023-12-05 21:58:54 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 21:58:54 INFO  - HikariPool-1 - Shutdown initiated...
-2023-12-05 21:58:54 INFO  - HikariPool-1 - Shutdown completed.
-2023-12-05 21:59:03 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 23804 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
-2023-12-05 21:59:03 INFO  - No active profile set, falling back to 1 default profile: "default"
-2023-12-05 21:59:03 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-12-05 21:59:04 INFO  - Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
-2023-12-05 21:59:04 INFO  - Tomcat initialized with port 1808 (http)
-2023-12-05 21:59:04 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
-2023-12-05 21:59:04 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
-2023-12-05 21:59:04 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
-2023-12-05 21:59:04 INFO  - Starting service [Tomcat]
-2023-12-05 21:59:04 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-05 21:59:04 INFO  - Initializing Spring embedded WebApplicationContext
-2023-12-05 21:59:04 INFO  - Root WebApplicationContext: initialization completed in 1551 ms
-2023-12-05 21:59:04 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-12-05 21:59:05 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
-2023-12-05 21:59:05 INFO  - HHH000026: Second-level cache disabled
-2023-12-05 21:59:05 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-12-05 21:59:05 INFO  - HikariPool-1 - Starting...
-2023-12-05 21:59:05 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72324965
-2023-12-05 21:59:05 INFO  - HikariPool-1 - Start completed.
-2023-12-05 21:59:06 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-12-05 21:59:06 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-12-05 21:59:07 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-12-05 21:59:07 INFO  - Tomcat started on port 1808 (http) with context path ''
-2023-12-05 21:59:07 INFO  - Started PharmacyInventorySystemApplication in 5.074 seconds (process running for 5.497)
-2023-12-05 21:59:07 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-05 21:59:07 INFO  - Initializing Servlet 'dispatcherServlet'
-2023-12-05 21:59:07 INFO  - Completed initialization in 2 ms
-2023-12-05 21:59:08 INFO  - Init duration for springdoc-openapi is: 310 ms
-2023-12-05 21:59:19 INFO  - Adding new user
-2023-12-05 21:59:19 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 17.
+2023-12-06 14:36:53 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 20484 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 14:36:53 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 14:36:54 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 14:36:54 INFO  - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2023-12-06 14:36:54 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 14:36:54 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 14:36:54 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 14:36:54 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 14:36:54 INFO  - Starting service [Tomcat]
+2023-12-06 14:36:54 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 14:36:55 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 14:36:55 INFO  - Root WebApplicationContext: initialization completed in 1575 ms
+2023-12-06 14:36:55 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 14:36:55 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 14:36:55 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 14:36:55 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 14:36:55 INFO  - HikariPool-1 - Starting...
+2023-12-06 14:36:55 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@481ed95c
+2023-12-06 14:36:55 INFO  - HikariPool-1 - Start completed.
+2023-12-06 14:36:56 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 14:36:56 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 14:36:57 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 14:36:58 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 14:36:58 INFO  - Started PharmacyInventorySystemApplication in 5.304 seconds (process running for 5.685)
+2023-12-06 14:36:59 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 14:36:59 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 14:36:59 INFO  - Completed initialization in 1 ms
+2023-12-06 14:37:00 INFO  - Init duration for springdoc-openapi is: 295 ms
+2023-12-06 14:38:55 INFO  - Fetching specific medicine type.
+2023-12-06 14:39:01 INFO  - Fetching specific medicine type.
+2023-12-06 14:39:06 INFO  - Fetching specific medicine type.
+2023-12-06 14:39:06 ERROR - Medicine With Requested Medicine Type was not found in the Database.
+2023-12-06 14:56:34 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 14:56:34 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 14:56:34 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 14:56:46 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 23900 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 14:56:46 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 14:56:46 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 14:56:46 INFO  - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2023-12-06 14:56:47 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 14:56:47 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 14:56:47 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 14:56:47 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 14:56:47 INFO  - Starting service [Tomcat]
+2023-12-06 14:56:47 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 14:56:47 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 14:56:47 INFO  - Root WebApplicationContext: initialization completed in 1670 ms
+2023-12-06 14:56:47 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 14:56:48 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 14:56:48 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 14:56:48 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 14:56:48 INFO  - HikariPool-1 - Starting...
+2023-12-06 14:56:48 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3316527e
+2023-12-06 14:56:48 INFO  - HikariPool-1 - Start completed.
+2023-12-06 14:56:49 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 14:56:49 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 14:56:50 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 14:56:50 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 14:56:50 INFO  - Started PharmacyInventorySystemApplication in 5.158 seconds (process running for 5.522)
+2023-12-06 14:57:06 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 14:57:06 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 14:57:06 INFO  - Completed initialization in 0 ms
+2023-12-06 14:57:06 INFO  - Init duration for springdoc-openapi is: 302 ms
+2023-12-06 14:57:26 INFO  - Fetching specific user role.
+2023-12-06 14:57:45 INFO  - Fetching specific user role.
+2023-12-06 14:58:18 INFO  - Fetching specific medicine type.
+2023-12-06 14:58:18 ERROR - Medicine With Requested Medicine Type was not found in the Database.
+2023-12-06 14:59:01 INFO  - Fetching specific medicine type.
+2023-12-06 14:59:40 INFO  - Deleting User.
+2023-12-06 14:59:40 ERROR - User Not Found in the Database.
+2023-12-06 14:59:57 INFO  - Deleting User.
+2023-12-06 14:59:57 INFO  - Deleting User id: 3: name3: to the database.
+2023-12-06 15:00:07 INFO  - Fetching specific user role.
+2023-12-06 15:00:07 ERROR - User Not Found in the Database.
+2023-12-06 15:44:33 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:44:33 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 15:44:33 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 15:44:42 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 18596 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 15:44:42 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 15:44:43 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 15:44:43 INFO  - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2023-12-06 15:44:44 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 15:44:44 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 15:44:44 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 15:44:44 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 15:44:44 INFO  - Starting service [Tomcat]
+2023-12-06 15:44:44 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 15:44:44 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 15:44:44 INFO  - Root WebApplicationContext: initialization completed in 1628 ms
+2023-12-06 15:44:44 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 15:44:44 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 15:44:44 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 15:44:44 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 15:44:44 INFO  - HikariPool-1 - Starting...
+2023-12-06 15:44:45 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@249b54af
+2023-12-06 15:44:45 INFO  - HikariPool-1 - Start completed.
+2023-12-06 15:44:45 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 15:44:45 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:44:46 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 15:44:47 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 15:44:47 INFO  - Started PharmacyInventorySystemApplication in 4.91 seconds (process running for 5.295)
+2023-12-06 15:44:50 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 15:44:50 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 15:44:50 INFO  - Completed initialization in 1 ms
+2023-12-06 15:44:50 WARN  - found more than one OpenAPIDefinition class. springdoc-openapi will be using the first one found.
+2023-12-06 15:44:50 INFO  - Init duration for springdoc-openapi is: 301 ms
+2023-12-06 15:46:12 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:46:12 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 15:46:12 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 15:46:56 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 13044 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 15:46:56 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 15:46:57 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 15:46:57 INFO  - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2023-12-06 15:46:58 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 15:46:58 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 15:46:58 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 15:46:58 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 15:46:58 INFO  - Starting service [Tomcat]
+2023-12-06 15:46:58 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 15:46:58 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 15:46:58 INFO  - Root WebApplicationContext: initialization completed in 1413 ms
+2023-12-06 15:46:58 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 15:46:58 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 15:46:58 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 15:46:58 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 15:46:58 INFO  - HikariPool-1 - Starting...
+2023-12-06 15:46:58 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4751cd3
+2023-12-06 15:46:58 INFO  - HikariPool-1 - Start completed.
+2023-12-06 15:46:59 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 15:46:59 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:47:00 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 15:47:01 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 15:47:01 INFO  - Started PharmacyInventorySystemApplication in 4.796 seconds (process running for 5.187)
+2023-12-06 15:47:34 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 15:47:34 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 15:47:34 INFO  - Completed initialization in 1 ms
+2023-12-06 15:47:34 INFO  - Deleting medicine.
+2023-12-06 15:47:34 INFO  - Deleting Medicine id: 5: Ascof Lagundi: to the inventory.
+2023-12-06 15:47:58 INFO  - Adding new medicine.
+2023-12-06 15:47:58 INFO  - Adding Medicine:6:Ascofe: to the inventory.
+2023-12-06 15:49:24 INFO  - Adding new transaction.
+2023-12-06 15:49:24 ERROR - Medicine Not Found in the Database.
+2023-12-06 15:49:44 INFO  - Adding new transaction.
+2023-12-06 15:49:44 INFO  - Retrieving Medicine:1:Biogesic: data.
+2023-12-06 15:49:44 ERROR - User Not Found in the Database.
+2023-12-06 15:49:55 INFO  - Adding new transaction.
+2023-12-06 15:49:55 INFO  - Retrieving Medicine:1:Biogesic: data.
+2023-12-06 15:49:55 INFO  - Retrieving User:1:name1: data.
+2023-12-06 15:49:55 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 7.
+2023-12-06 15:51:45 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:51:45 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 15:51:45 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 15:55:08 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 23624 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 15:55:08 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 15:55:09 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 15:55:09 INFO  - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2023-12-06 15:55:10 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 15:55:10 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 15:55:10 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 15:55:10 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 15:55:10 INFO  - Starting service [Tomcat]
+2023-12-06 15:55:10 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 15:55:10 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 15:55:10 INFO  - Root WebApplicationContext: initialization completed in 1424 ms
+2023-12-06 15:55:10 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 15:55:10 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 15:55:10 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 15:55:10 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 15:55:10 INFO  - HikariPool-1 - Starting...
+2023-12-06 15:55:11 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15186ce0
+2023-12-06 15:55:11 INFO  - HikariPool-1 - Start completed.
+2023-12-06 15:55:11 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 15:55:11 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:55:12 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 15:55:13 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 15:55:13 INFO  - Started PharmacyInventorySystemApplication in 4.699 seconds (process running for 5.069)
+2023-12-06 15:55:35 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 15:55:35 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 15:55:35 INFO  - Completed initialization in 0 ms
+2023-12-06 15:55:36 INFO  - Init duration for springdoc-openapi is: 278 ms
+2023-12-06 15:55:56 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:55:56 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 15:55:56 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 15:57:01 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 28300 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 15:57:01 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 15:57:02 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 15:57:02 INFO  - Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2023-12-06 15:57:02 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 15:57:02 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 15:57:02 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 15:57:02 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 15:57:02 INFO  - Starting service [Tomcat]
+2023-12-06 15:57:02 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 15:57:03 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 15:57:03 INFO  - Root WebApplicationContext: initialization completed in 1449 ms
+2023-12-06 15:57:03 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 15:57:03 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 15:57:03 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 15:57:03 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 15:57:03 INFO  - HikariPool-1 - Starting...
+2023-12-06 15:57:03 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45297e7
+2023-12-06 15:57:03 INFO  - HikariPool-1 - Start completed.
+2023-12-06 15:57:04 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 15:57:04 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:57:05 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 15:57:06 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 15:57:06 INFO  - Started PharmacyInventorySystemApplication in 4.895 seconds (process running for 5.268)
+2023-12-06 15:57:06 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 15:57:06 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 15:57:06 INFO  - Completed initialization in 1 ms
+2023-12-06 15:57:06 INFO  - Init duration for springdoc-openapi is: 296 ms
+2023-12-06 15:57:14 INFO  - Fetching specific user role.
+2023-12-06 15:57:27 INFO  - Fetching specific user role.
+2023-12-06 15:57:27 ERROR - User Not Found in the Database.
+2023-12-06 15:58:09 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:58:09 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 15:58:09 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 15:58:46 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 21028 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 15:58:46 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 15:58:47 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 15:58:47 INFO  - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2023-12-06 15:58:47 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 15:58:47 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 15:58:47 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 15:58:47 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 15:58:47 INFO  - Starting service [Tomcat]
+2023-12-06 15:58:47 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 15:58:47 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 15:58:47 INFO  - Root WebApplicationContext: initialization completed in 1376 ms
+2023-12-06 15:58:48 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 15:58:48 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 15:58:48 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 15:58:48 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 15:58:48 INFO  - HikariPool-1 - Starting...
+2023-12-06 15:58:48 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@194911c1
+2023-12-06 15:58:48 INFO  - HikariPool-1 - Start completed.
+2023-12-06 15:58:49 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 15:58:49 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 15:58:50 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 15:58:50 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 15:58:50 INFO  - Started PharmacyInventorySystemApplication in 4.585 seconds (process running for 4.957)
+2023-12-06 15:58:55 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 15:58:55 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 15:58:55 INFO  - Completed initialization in 1 ms
+2023-12-06 15:58:56 INFO  - Init duration for springdoc-openapi is: 318 ms
+2023-12-06 20:48:52 INFO  - Fetching all medicine.
+2023-12-06 20:48:52 INFO  - Retrieving all the medicine in the inventory.
+2023-12-06 20:50:21 INFO  - Fetching specific medicine.
+2023-12-06 20:50:21 INFO  - Retrieving Medicine:1:Biogesic: data.
+2023-12-06 20:51:30 INFO  - Fetching specific medicine type.
+2023-12-06 20:53:25 INFO  - Adding new medicine.
+2023-12-06 20:53:25 INFO  - Adding Medicine:7:Ascof Lagundi: to the inventory.
+2023-12-06 20:54:37 INFO  - Adding new medicine.
+2023-12-06 20:54:37 INFO  - Adding Medicine:8:Robitusin: to the inventory.
+2023-12-06 20:56:59 INFO  - Update existing medicine.
+2023-12-06 20:56:59 INFO  - Ascof Lagundi Plemex was updated successfully.
+2023-12-06 20:57:33 INFO  - Update existing medicine.
+2023-12-06 20:57:33 INFO  - Ascof Lagundi Plemex was updated successfully.
+2023-12-06 21:00:59 INFO  - Deleting medicine.
+2023-12-06 21:00:59 INFO  - Deleting Medicine id: 6: Ascof Lagundi Plemex: to the inventory.
+2023-12-06 21:01:19 INFO  - Deleting medicine.
+2023-12-06 21:01:19 ERROR - Medicine Not Found in the Database.
+2023-12-06 21:09:01 INFO  - Adding new user.
+2023-12-06 21:09:01 INFO  - Adding User:4:Eunji: to the database.
+2023-12-06 21:10:44 INFO  - Fetching all user.
+2023-12-06 21:10:44 INFO  - Retrieving all the user in the database.
+2023-12-06 21:12:02 INFO  - Fetching specific user
+2023-12-06 21:12:02 INFO  - Retrieving User:4:Eunji: data.
+2023-12-06 21:13:08 INFO  - Fetching specific user role.
+2023-12-06 21:15:00 INFO  - Update existing user.
+2023-12-06 21:15:00 INFO  - Kang Seulgi was updated successfully.
+2023-12-06 21:15:58 INFO  - Deleting User.
+2023-12-06 21:15:58 INFO  - Deleting User id: 1: Kang Seulgi: to the database.
+2023-12-06 21:17:41 INFO  - Adding new transaction.
+2023-12-06 21:17:41 INFO  - Retrieving Medicine:1:Biogesic: data.
+2023-12-06 21:17:41 INFO  - Retrieving User:4:Eunji: data.
+2023-12-06 21:17:41 ERROR - Stock should not be a negative value.
+2023-12-06 21:18:09 INFO  - Adding new transaction.
+2023-12-06 21:18:09 INFO  - Retrieving Medicine:1:Biogesic: data.
+2023-12-06 21:18:09 INFO  - Retrieving User:4:Eunji: data.
+2023-12-06 21:18:09 INFO  - Reducing Stock to Biogesic, was updated successfully. the updated stock is now 5.
+2023-12-06 21:19:01 INFO  - Fetching all transaction.
+2023-12-06 21:19:01 INFO  - Retrieving all the transactions in the database.
+2023-12-06 21:20:17 INFO  - Fetching specific transaction.
+2023-12-06 21:20:17 INFO  - Retrieving Transaction:1: data.
+2023-12-06 21:38:36 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 21:38:36 INFO  - HikariPool-1 - Shutdown initiated...
+2023-12-06 21:38:36 INFO  - HikariPool-1 - Shutdown completed.
+2023-12-06 21:38:47 INFO  - Starting PharmacyInventorySystemApplication using Java 17.0.1 with PID 8808 (C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem\target\classes started by 261762 in C:\Users\261762\Desktop\PharmacyManagementSystem\PharmacyInventorySystem)
+2023-12-06 21:38:47 INFO  - No active profile set, falling back to 1 default profile: "default"
+2023-12-06 21:38:48 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-06 21:38:48 INFO  - Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2023-12-06 21:38:49 INFO  - Tomcat initialized with port 1808 (http)
+2023-12-06 21:38:49 INFO  - An older version [1.2.39] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2023-12-06 21:38:49 INFO  - Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+2023-12-06 21:38:49 INFO  - OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+2023-12-06 21:38:49 INFO  - Starting service [Tomcat]
+2023-12-06 21:38:49 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-06 21:38:49 INFO  - Initializing Spring embedded WebApplicationContext
+2023-12-06 21:38:49 INFO  - Root WebApplicationContext: initialization completed in 1710 ms
+2023-12-06 21:38:49 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-06 21:38:49 INFO  - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-06 21:38:49 INFO  - HHH000026: Second-level cache disabled
+2023-12-06 21:38:49 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-06 21:38:49 INFO  - HikariPool-1 - Starting...
+2023-12-06 21:38:50 INFO  - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd1548e
+2023-12-06 21:38:50 INFO  - HikariPool-1 - Start completed.
+2023-12-06 21:38:50 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-06 21:38:50 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06 21:38:51 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-06 21:38:51 INFO  - Tomcat started on port 1808 (http) with context path ''
+2023-12-06 21:38:51 INFO  - Started PharmacyInventorySystemApplication in 4.769 seconds (process running for 5.11)
+2023-12-06 21:38:58 INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 21:38:58 INFO  - Initializing Servlet 'dispatcherServlet'
+2023-12-06 21:38:58 INFO  - Completed initialization in 1 ms
+2023-12-06 21:38:59 INFO  - Init duration for springdoc-openapi is: 307 ms
+2023-12-06 21:41:13 WARN  - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('a' (code 97)): was expecting comma to separate Object entries]
